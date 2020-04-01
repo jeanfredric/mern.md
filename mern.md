@@ -1,8 +1,16 @@
 # MERN
 
-One Paragraph of project description goes here
+Beskrivning.
+* M - MongoDB
+* E - Express
+* R - React
+* N - Node.js
 
 ## React
+Installera den här grejen:
+```
+npm install hejsan
+```
 
 ## Express
 
