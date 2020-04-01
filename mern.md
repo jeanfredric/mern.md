@@ -10,6 +10,7 @@ Verktyg | Beskrivning
 **N**ode.js | Controller & Model
 
 Det är även bra att kunna:
+* **HTTP** - Hur protokollet är uppbyggt, meddelande-koder och typer av förfrågningar.
 * **JSON** - Lättviktat språk som används när man skickar kod mellan tex. klient och server.
 * **Postman** - HTTP-klient att testa sitt program med genom att skicka requests. Istället för att använda webbläsaren.
 * **React Hooks** - Tillägg till React som gör det möjligt att skapa states utan att skapa en klass.
@@ -23,15 +24,22 @@ npm install hejsan
 
 ## Express
 
+
+### Middleware
+Funktioner som har tillgång till HTTP-request och respons-objekt. 
+* Express har inbyggd middleware
+* Det finns ytterligare tredjeparts middleware
+* Man kan bygga egna middleware
+
 ## Node.js
 
 ### Packages
-* **bcryptjs** *- Kort beskrivning*
+* **bcryptjs** *- Verktyg för att kryptera lösenord*
 * **config** *- Ger möjlighet att spala globala variabler*
-* **express** *- Kort beskrivning*
+* **express** *- Mängder funktioner som underlättar användningen av Node.js*
 * **express-validator** *- Funktioner som gör det möjlighet att validera data (lösenord, användarnamn etc) från vyn*
 * **gravatar** *- Innehåller funktioner som ger möjlighet att använda avatar i sin app*
-* **jsonwebtoken** *- Hjälper till att hålla koll på vem som är inloggad likt en sessionsvariabel*
+* **jsonwebtoken** *- Hjälper till att hålla koll på vem som är inloggad samt avgör vilka routes användaren har tillgång till*
 * **mongoose** *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB(?)*
 * **request** *- Kort beskrivning*
 
@@ -47,6 +55,19 @@ npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose r
 
 ## MongoDB
 
+En fördel jämte relationsdatabaser är att man kan stoppa in data utan att på förhand bestämma namn typ osv på den data som ska sparas.
+
+Man kan med ett funktionsanrop (mha mongoose!?) hämta ett objekt från servern och sedan skicka till klienten. Eftersom alla program förstår samma språk behöver inget parsas. Exempel:
+
+```javascript
+  res.json(User.findById(req.user.id));
+```
+
+Det går självklart även att spara ned objektet från servern i ett JavaScript-objekt:
+
+```javascript
+  let user = User.findById(req.user.id);
+```
 
 ## Markdown language (.md)
 
