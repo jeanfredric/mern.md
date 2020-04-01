@@ -4,10 +4,10 @@ Beskrivning. Det som är bra med den här stacken är att man genomgående endas
 
 Förkortning | Verktyg | Beskrivning
 :--- | :--- | :---
-**M** | MongoDB | Databas
-**E** | Express | Ramverk som underlättar Node.js
-**R** | React   | View
-**N** | Node.js | Controller & Model
+**M** | **M** ongoDB | Databas
+**E** | **E**xpress | Ramverk som underlättar Node.js
+**R** | **R**eact   | View
+**N** | **N**ode.js | Controller & Model
 
 Det är även bra att kunna:
 * **JSON** - Lättviktat språk som används när man skickar kod mellan tex. klient och server.
@@ -31,7 +31,7 @@ npm install hejsan
 * express *- Kort beskrivning*
 * express-validator *- Funktioner som gör det möjlighet att validera data (lösenord, användarnamn etc) från vyn*
 * gravatar *- Innehåller funktioner som ger möjlighet att använda avatar i sin app*
-* jsonwebtoken *- Hjälper till att hålla koll på vem som är inloggad(?)*
+* jsonwebtoken *- Hjälper till att hålla koll på vem som är inloggad likt en sessionsvariabel*
 * mongoose *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB(?)*
 * request *- Kort beskrivning*
 
