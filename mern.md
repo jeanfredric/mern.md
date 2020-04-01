@@ -9,11 +9,6 @@ Förkortning | Verktyg | Beskrivning
 **R** | React   | View
 **N** | Node.js | Controller & Model
 
-* M - MongoDB
-* E - Express
-* R - React
-* N - Node.js
-
 Det är även bra att kunna:
 * **JSON** - Lättviktat språk som används när man skickar kod mellan tex. klient och server.
 * **Postman** - HTTP-klient att testa sitt program med genom att skicka requests. Istället för att använda webbläsaren.
