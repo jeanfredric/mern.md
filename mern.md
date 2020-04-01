@@ -25,6 +25,26 @@ npm install hejsan
 
 ## Node.js
 
+### Packages
+* bcryptjs *- Kort beskrivning*
+* config *- Ger möjlighet att spala globala variabler*
+* express *- Kort beskrivning*
+* express-validator *- Funktioner som gör det möjlighet att validera data (lösenord, användarnamn etc) från vyn*
+* gravatar *- Innehåller funktioner som ger möjlighet att använda avatar i sin app*
+* jsonwebtoken *- Hjälper till att hålla koll på vem som är inloggad(?)*
+* mongoose *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB(?)*
+* request *- Kort beskrivning*
+
+* concurrently *- Kort beskrivning*
+* nodemon *- Gör att man inte måste starta om servern vid varje ändring*
+
+*(Vissa av dessa kanske bör tillhöra annat än Node.js dock. Typ mongoose är la MongoDB? Borde vi reda ut)*
+
+Installera alla samtidigt genom följande syntax i terminalen:
+```
+npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose request
+```
+
 ## MongoDB
 
 
