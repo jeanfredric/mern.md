@@ -2,12 +2,12 @@
 
 Beskrivning. Det som är bra med den här stacken är att man genomgående endast använder JavaScript och JSON.
 
-Förkortning | Verktyg | Beskrivning
-:--- | :--- | :---
-**M** | **M** ongoDB | Databas
-**E** | **E**xpress | Ramverk som underlättar Node.js
-**R** | **R**eact   | View
-**N** | **N**ode.js | Controller & Model
+Verktyg | Beskrivning
+:--- | :---
+**M**ongoDB | Databas
+**E**xpress | Ramverk som underlättar Node.js
+**R**eact   | View
+**N**ode.js | Controller & Model
 
 Det är även bra att kunna:
 * **JSON** - Lättviktat språk som används när man skickar kod mellan tex. klient och server.
@@ -26,17 +26,17 @@ npm install hejsan
 ## Node.js
 
 ### Packages
-* bcryptjs *- Kort beskrivning*
-* config *- Ger möjlighet att spala globala variabler*
-* express *- Kort beskrivning*
-* express-validator *- Funktioner som gör det möjlighet att validera data (lösenord, användarnamn etc) från vyn*
-* gravatar *- Innehåller funktioner som ger möjlighet att använda avatar i sin app*
-* jsonwebtoken *- Hjälper till att hålla koll på vem som är inloggad likt en sessionsvariabel*
-* mongoose *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB(?)*
-* request *- Kort beskrivning*
+* **bcryptjs** *- Kort beskrivning*
+* **config** *- Ger möjlighet att spala globala variabler*
+* **express** *- Kort beskrivning*
+* **express-validator** *- Funktioner som gör det möjlighet att validera data (lösenord, användarnamn etc) från vyn*
+* **gravatar** *- Innehåller funktioner som ger möjlighet att använda avatar i sin app*
+* **jsonwebtoken** *- Hjälper till att hålla koll på vem som är inloggad likt en sessionsvariabel*
+* **mongoose** *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB(?)*
+* **request** *- Kort beskrivning*
 
-* concurrently *- Kort beskrivning*
-* nodemon *- Gör att man inte måste starta om servern vid varje ändring*
+* **concurrently** *- Kort beskrivning*
+* **nodemon** *- Gör att man inte måste starta om servern vid varje ändring*
 
 *(Vissa av dessa kanske bör tillhöra annat än Node.js dock. Typ mongoose är la MongoDB? Borde vi reda ut)*
 
