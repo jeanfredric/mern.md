@@ -32,8 +32,13 @@ Funktioner som har tillgång till HTTP-request och respons-objekt.
 * Man kan bygga egna middleware
 
 ## Node.js
+Består av tre core-moduler:
+* **HTTP** *- Används för att kommunicera med en web-klient.*
+* **path** *- Kan navigera och hämta bland fil-rutter.
+* **fs** *- Kan skapa filer och mappar*
 
-### Packages
+### Node Packet Manager (npm)
+Gör det möjligt att installera tredjepartspaket. Exempel på dessa:
 * **bcryptjs** *- Verktyg för att kryptera lösenord*
 * **config** *- Ger möjlighet att spala globala variabler*
 * **express** *- Mängder funktioner som underlättar användningen av Node.js*
@@ -42,7 +47,6 @@ Funktioner som har tillgång till HTTP-request och respons-objekt.
 * **jsonwebtoken** *- Hjälper till att hålla koll på vem som är inloggad samt avgör vilka routes användaren har tillgång till*
 * **mongoose** *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB(?)*
 * **request** *- Kort beskrivning*
-
 * **concurrently** *- Kort beskrivning*
 * **nodemon** *- Gör att man inte måste starta om servern vid varje ändring*
 
@@ -51,6 +55,10 @@ Funktioner som har tillgång till HTTP-request och respons-objekt.
 Installera alla samtidigt genom följande syntax i terminalen:
 ```
 npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose request
+```
+Kör servern genom att navigera till rätt mapp och kör följande kommando:
+```
+npm run server
 ```
 
 ## MongoDB
