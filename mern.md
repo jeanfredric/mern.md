@@ -31,24 +31,37 @@ Funktioner som har tillgång till HTTP-request och respons-objekt.
 * Det finns ytterligare tredjeparts middleware
 * Man kan bygga egna middleware
 
+I samband med att man tar emot en HTTP-request från klienten så kan man kalla på denna middleware-funktionen. I exemplet nedan kallar vi på en middleware-funktion som heter auth innan requesten hanteras:
+```javascript
+router.get('/', auth, (req, res) => {
+  res.send('Middleware function auth has been executed before this line');
+});
+```
+Man kan även köra flera middleware-funktioner:
+
+```javascript
+router.get('/', [auth, check], (req, res) => {
+  res.send('Middleware functions auth and check has been executed before this line');
+});
+```
 ## Node.js
 Består av tre core-moduler:
 * **HTTP** *- Används för att kommunicera med en web-klient.*
-* **path** *- Kan navigera och hämta bland fil-rutter.
+* **path** *- Kan navigera och hämta bland fil-rutter.*
 * **fs** *- Kan skapa filer och mappar*
 
 ### Node Packet Manager (npm)
-Gör det möjligt att installera tredjepartspaket. Exempel på dessa:
+Gör det möjligt att installera tredjepartspaket. Alla paket finns att läsa om [här](https://www.npmjs.com/)  och nedan finns några exempel:
+* **concurrently** *- Gör det möjligt att köra/installera flera npm-paket i samma rad*
+* **nodemon** *- Gör att man inte måste starta om servern vid varje ändring*
 * **bcryptjs** *- Verktyg för att kryptera lösenord*
 * **config** *- Ger möjlighet att spala globala variabler*
 * **express** *- Mängder funktioner som underlättar användningen av Node.js*
 * **express-validator** *- Funktioner som gör det möjlighet att validera data (lösenord, användarnamn etc) från vyn*
 * **gravatar** *- Hämtar en avatar om användarens email är kopplat till gravatar, lite som bitmoji*
 * **jsonwebtoken** *- Hjälper till att hålla koll på vem som är inloggad samt avgör vilka routes användaren har tillgång till*
-* **mongoose** *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB(?)*
-* **request** *- Kort beskrivning*
-* **concurrently** *- Kort beskrivning*
-* **nodemon** *- Gör att man inte måste starta om servern vid varje ändring*
+* **mongoose** *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB, motsvarar DAL*
+* **request** *- Förenklar syntax i samband med HTTP-meddelanden*
 
 *(Vissa av dessa kanske bör tillhöra annat än Node.js dock. Typ mongoose är la MongoDB? Borde vi reda ut)*
 
@@ -61,6 +74,9 @@ Kör servern genom att navigera till rätt mapp och kör följande kommando:
 npm run server
 ```
 
+### async / await
+Varje gång vi använder mongoose måste vi använda denna pga "it returns a promise" vad det nu innebär.
+
 ## MongoDB
 
 En fördel jämte relationsdatabaser är att man kan stoppa in data utan att på förhand bestämma namn typ osv på den data som ska sparas.
@@ -68,13 +84,13 @@ En fördel jämte relationsdatabaser är att man kan stoppa in data utan att på
 Man kan med ett funktionsanrop (mha mongoose!?) hämta ett objekt från servern och sedan skicka till klienten. Eftersom alla program förstår samma språk behöver inget parsas. Exempel:
 
 ```javascript
-  res.json(User.findById(req.user.id));
+res.json(User.findById(req.user.id));
 ```
 
 Det går självklart även att spara ned objektet från servern i ett JavaScript-objekt:
 
 ```javascript
-  let user = User.findById(req.user.id);
+let user = User.findById(req.user.id);
 ```
 
 ## Markdown language (.md)
