@@ -38,7 +38,7 @@ Funktioner som har tillgång till HTTP-request och respons-objekt.
 * **config** *- Ger möjlighet att spala globala variabler*
 * **express** *- Mängder funktioner som underlättar användningen av Node.js*
 * **express-validator** *- Funktioner som gör det möjlighet att validera data (lösenord, användarnamn etc) från vyn*
-* **gravatar** *- Innehåller funktioner som ger möjlighet att använda avatar i sin app*
+* **gravatar** *- Hämtar en avatar om användarens email är kopplat till gravatar, lite som bitmoji*
 * **jsonwebtoken** *- Hjälper till att hålla koll på vem som är inloggad samt avgör vilka routes användaren har tillgång till*
 * **mongoose** *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB(?)*
 * **request** *- Kort beskrivning*
