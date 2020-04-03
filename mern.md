@@ -17,9 +17,9 @@ Det är även bra att kunna:
 * **Redux** - Underlättar när man har mycket data i React. När man tex. vill dela states mellan komponenter.
 
 ## React
-Installera den här grejen för att den är bra:
+Installera react genom att gå till din projektmapp och skriv in följande kommando:
 ```
-npm install hejsan
+npx create-react-app
 ```
 
 ## Express
@@ -52,7 +52,7 @@ Består av tre core-moduler:
 
 ### Node Packet Manager (npm)
 Gör det möjligt att installera tredjepartspaket. Alla paket finns att läsa om [här](https://www.npmjs.com/)  och nedan finns några exempel:
-* **concurrently** *- Gör det möjligt att köra/installera flera npm-paket i samma rad*
+* **concurrently** *- Gör det möjligt att köra React och Express samtidigt*
 * **nodemon** *- Gör att man inte måste starta om servern vid varje ändring*
 * **bcryptjs** *- Verktyg för att kryptera lösenord*
 * **config** *- Ger möjlighet att spala globala variabler*
