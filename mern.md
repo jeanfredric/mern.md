@@ -77,6 +77,7 @@ npm run server
 ### promise/ async / await
 Varje gång vi använder mongoose måste vi använda denna pga "it returns a promise" vad det nu innebär.
 * **Promise**- Ett "Promise" är exakt vad det låter som. Ett promise är en funktion som tar in två variabler "(resolve, reject)". Funktionen uträttar sedan ansvaret det blivit tilldelad och om allting fungerade som det skulle returneras resolve med ett meddelande. Om funktionen av någon anledning ej kunde utföra sitt uppdrag eller något annat inträffade returneras reject med ett tillhörande meddelande. Funktioner som ska utföra tidskrävande uppgifter skrivs ofta som "promises" etersom att man då kan lägga till ett ".then" och uttöka med yttligare promisefunktioner. Dvs, promise1.then.promise2 osv.. Detta gör det möjligt att låta tidskrävande funktioner exekviera i bakgrunden och låter programmet/tråden utföra andra uppgifter medan den väntar.
+![](promise.jpg)
 
 
 ## MongoDB
