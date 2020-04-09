@@ -1,7 +1,7 @@
 # MERN
 
 ## Överblick
-Beskrivning. Det som är bra med den här stacken är att man genomgående endast använder JavaScript och JSON.
+Det som är bra med den här stacken är att man genomgående endast använder JavaScript och JSON.
 
 Verktyg | Beskrivning
 :--- | :---
@@ -21,6 +21,8 @@ Ett av dessa framework är **E**xpress, detta framework gör det möjligt att ha
 **M**ongoDB körs ofta på en separat server och fungerar som databas för att lagra data. MongoDB **A**tlas är en molnbaserad databas som kan användas av alla som innhar nyckeln till databasern.
 
 All kommunikation (data) som skickas mellan browser, server samt databas skickas i **J**SON format. JSON är ett kompakt textbaserat fomat som lämpar sig väl för att skickas mellan olika klienter.
+
+I bilden till höger kan vi se att det finns två olika typer av backenddatabaser som kan byggas upp. Den ena **R**EST API hanterar varje route separat (dvs, en ny sida laddas upp till browser/klienten varje gång hen väljer att uppdatera). På motsvarande sätt går det att bygga upp en **G**raphQL API, denna har endast en statisk route men hanterar istället data via query kommandon.
 
 <p float="left">
   <img src="backend.jpg" width="400" />
