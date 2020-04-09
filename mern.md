@@ -76,7 +76,7 @@ npm run server
 
 ### promise/ async / await
 Varje gång vi använder mongoose måste vi använda denna pga "it returns a promise" vad det nu innebär.
-* **Promise**- Ett "Promise" är exakt vad det låter som. Ett promise är en funktion som tar in två variabler "(resolve, reject)". Funktionen uträttar sedan ansvaret det blivit tilldelad och om allting fungerade som det skulle returneras resolve med ett meddelande. Om funktionen av någon anledning ej kunde utföra sitt uppdrag eller något annat inträffade returneras reject med ett tillhörande meddelande. Funktioner som ska utföra tidskrävande uppgifter skrivs ofta som "promises" etersom att man då kan lägga till ett ".then" och uttöka med yttligare promisefunktioner. Dvs, promise1.then.promise2 osv.. Detta gör det möjligt att låta tidskrävande funktioner exekvera i bakgrunden (på APIet) och låter programmet/tråden utföra andra uppgifter medan den väntar.
+* **Promise** - Ett "Promise" är exakt vad det låter som. Ett promise är en funktion som tar in två variabler "(resolve, reject)". Funktionen uträttar sedan ansvaret det blivit tilldelad och om allting fungerade som det skulle returneras resolve med ett meddelande. Om funktionen av någon anledning ej kunde utföra sitt uppdrag eller något annat inträffade returneras reject med ett tillhörande meddelande. Funktioner som ska utföra tidskrävande uppgifter skrivs ofta som "promises" etersom att man då kan lägga till ett ".then" och uttöka med yttligare promisefunktioner. Dvs, promise1.then.promise2 osv.. Detta gör det möjligt att låta tidskrävande funktioner exekvera i bakgrunden (på APIet) och låter programmet/tråden utföra andra uppgifter medan den väntar.
 
 ![](promise.jpg)
 
@@ -84,7 +84,10 @@ Varje gång vi använder mongoose måste vi använda denna pga "it returns a pro
 * [The event loop](https://www.youtube.com/watch?v=XzXIMZMN9k4/) - En kort video om hur even loopen fungerar.
 
 <img src="eventLoop.jpg" width="590" height="321" />
-![](eventLoop.jpg)
+
+* **Async** - Funtioner som returnerar ett "promise" märks som async. Detta medför att javascript förstår att kommunikationen som kommer att ske inom funktionen hanteras asynkront. Dvs, ett flertal funtioner kommer att deligeras över till web APIet och det är ej nödvändigt att vänta på deras svar och låsa upp tråden.
+
+* **Await** - Denna funktion deklareras innan funtioner som kommer att returnera ett promise (kan endast användas inuti "async block"). Detta medför att "call stacken" vet om att den kan fortsätta till nästa kodrad i stacken utan att låsa upp sin tråd och vänta. 
 
 
 ## MongoDB
