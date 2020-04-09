@@ -1,5 +1,6 @@
 # MERN
 
+##Överblick
 Beskrivning. Det som är bra med den här stacken är att man genomgående endast använder JavaScript och JSON.
 
 Verktyg | Beskrivning
@@ -8,6 +9,14 @@ Verktyg | Beskrivning
 **E**xpress | Ramverk som underlättar Node.js
 **R**eact   | View
 **N**ode.js | Controller & Model
+
+För att få en bättre överblick vilka program som exekverar vart kan vi titta på nedstående bild. På klientsidan av programmet (view) arbetar **R**eact. Denna del står för all UI som användaren möts av. 
+På seversidan arbetar resterande program. **N**ode.js och **N**ode package manager (npm) är ett open source plattform som exekverar på serversidan. Node.js gör det möjligt att exekvera javascriptkod direkt på servern (datorn) utöver detta har plattformen väldigt många användbara framework att utnyttja (om du ska utföra någon specifik uppgift är det väldigt stor chans att någon annan redan skapat ett framework för att utöfra just denna uppgift) Ett av dessa framework är **E**xpress, detta framework gör det möjligt att hantera POST, GET, DELETE osv på specifika "router" (http://janne/api/dennaroute). Utöver detta tillhandahåller den flera andra användbara funktionaliteter såsom att göra de möjligt att lägga in **M**iddleware, Middleware validerar om requesten samt responsen som skickas mellan server och browser är korrekt utformade. **M**ongoDB körs ofta på en separat server och fungerar som databas för att lagra data. MongoDB **A**tlas är en molnbaserad databas som kan användas av alla som innhar nyckeln till databasern.
+
+<div>
+  <img src="backend.jpg" width="590" height="321" />
+  <img src="Overview.jpg" width="590" height="321" />
+</div>
 
 Det är även bra att kunna:
 * **HTTP** - Hur protokollet är uppbyggt, meddelande-koder och typer av förfrågningar.
