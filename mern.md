@@ -83,7 +83,7 @@ Varje gång vi använder mongoose måste vi använda denna pga "it returns a pro
 * ** Event Loop** - Innan vi sätter oss in i att förstå hur samt varför async och await fungerar är det viktigt att vi förstår grunderna inom javascript. En viktig aspekt med javascrips är att den jobbar på en singel tråd samt är asynkron (Asynkron kommunikation innebär att två skeenden interagerar med varandra men ej är tidsberoende av varndra. Ett sms är asynkron kommunikation eftersom mottagern ej behöver svara direkt på meddelandet medan ett telefonsamtal är synkron kommunikation). För att inte låsa upp gränssnittet när man kallar på en tidskrävande funktion anvädner sig javascript av den så kallade "Event loopen". Eventloopen innebär i stora drag att funtioner samt kommandon läggs på en stack som jobbar enligt (LIFO - last in first out). En viktigt aspekt att ha i åtanke är att javascript är singeltrådat men att en web browser arbetar med flera trådar. Detta betyder att vi kan kalla på en funtion som skickar en förfrågan till web APIet och sedan gå vidare till nästa kod att exekvera. När sedan web APIet har utfört sin uppgift skickar detta tillbaka sitt svar i form av en funktion och placerar detta i event kön (event queue). Denna funtion plockas sedan upp i stacken och exekveras när javascript tråden har tid. Nedan kan vi se en bild på hur javascript löser problemet när en timeput på 5000 ms sätts. 
 * [The event loop](https://www.youtube.com/watch?v=XzXIMZMN9k4/) - En kort video om hur even loopen fungerar.
 
-![](eventLoop.jpg = 250x)
+![](eventLoop.jpg =250x)
 
 ## MongoDB
 
