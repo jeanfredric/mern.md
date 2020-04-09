@@ -25,8 +25,8 @@ All kommunikation (data) som skickas mellan browser, server samt databas skickas
 I bilden till höger kan vi se att det finns två olika typer av backenddatabaser som kan byggas upp. Den ena **R**EST API hanterar varje route separat (dvs, en ny sida laddas upp till browser/klienten varje gång hen väljer att uppdatera). På motsvarande sätt går det att bygga upp en **G**raphQL API, denna har endast en statisk route men hanterar istället data via query kommandon.
 
 <p float="left">
-  <img src="backend.jpg" width="400" />
   <img src="Overview.jpg" width="400" /> 
+  <img src="backend.jpg" width="400" />
 </p>
 
 Det är även bra att kunna:
