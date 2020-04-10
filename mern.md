@@ -57,7 +57,9 @@ Användbara paket går att läsa om nedan:
 * **redux** *- Sparar alla "states" (objekt som kan förändras i din app tex en tickande klocka) i en global butik (eng. store, hehe). Redux gör det enklare att komma åt alla dessa "props" (värden som ska leverars neråt eller uppåt i applikationenn tex det uppdaterade klockslaget).*
 * **react-redux** *- När fölk pratar om att man använder redux så pratar de oftas om båda dessa paketen. Egentligen så används endast redux till att spara saker i butiken (the store, hehe) medan react-redux låter dig koppla dessa "states" till olika komponenter inom react. Redux i sig vet inte ens om att react existerar*
 * **redux-thunk** *- För att förklara thunk på en ganska hög nivå kan man beskriva det enligt följande: Av någon anleding vill man förkjuta en beräkning eller kodexekvering. Se bilden nedan som ett enkeklt exempel*
-<img src="thunk.jpg" width="400" />
+
+<img src="thunk.jpg" width="800" />
+
 * **redux-devtools-extension** *- Ett extension som gör det möjligt att se vilka "states" samt "props" som skickas i web browsern.*
 * **moment** *- Ett extensin som underlättar när det kommer till att spara samt visa datum och tid i javascript*
 * **react-moment** *- Samma som ovan i stort sett*
