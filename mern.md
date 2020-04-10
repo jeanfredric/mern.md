@@ -33,11 +33,8 @@ Det är även bra att kunna:
 * **HTTP** - Hur protokollet är uppbyggt, meddelande-koder och typer av förfrågningar.
 
 2xx - lyckad förfrågan | 3xx - vidarekoppling | 4xx - klientfel | 5xx - serverfel
-:--- | :--- :--- | :---
+:--- | :--- | :--- | :---
 **200** - OK | **300** - Moved Permanently | **400** - Bad Request | **500** - Internal Server Error
-**E**xpress | Ramverk som underlättar Node.js
-**R**eact   | View
-**N**ode.js | Controller & Model
 
 * **JSON** - Lättviktat språk som används när man skickar kod mellan tex. klient och server.
 * **Postman** - HTTP-klient att testa sitt program med genom att skicka requests. Istället för att använda webbläsaren.
