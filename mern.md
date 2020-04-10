@@ -50,6 +50,17 @@ Installera react genom att gå till din projektmapp och skriv in följande komma
 npx create-react-app
 ```
 
+Användbara paket går att läsa om nedan:
+
+**axios** *-blabla*
+**react-router-dom** *-blabla*
+**redux** *-blabla*
+**react-redux** *-blabla*
+**redux-thunk** *-blabla*
+**redux-devtools-extension** *-blabla*
+**moment** *-blabla*
+**react-moment** *-blabla*
+
 ## Express
 Express är byggt ovanpå HTTP modulen i node. Express gör det enklare att strukturera upp koden på ett bra sätt samt ger lite extra funktionalitet. 
 
