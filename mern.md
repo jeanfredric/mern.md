@@ -32,9 +32,12 @@ I bilden till höger kan vi se att det finns två olika typer av backenddatabase
 Det är även bra att kunna:
 * **HTTP** - Hur protokollet är uppbyggt, meddelande-koder och typer av förfrågningar.
 
+Några vanliga typer av felmeddelanden:
 2xx - lyckad förfrågan | 3xx - vidarekoppling | 4xx - klientfel | 5xx - serverfel
 :--- | :--- | :--- | :---
-**200** - OK | **300** - Moved Permanently | **400** - Bad Request | **500** - Internal Server Error
+**200** - OK | **300** - Multiple Choices | **400** - Bad Request | **500** - Internal Server Error
+**201** - Created | **301** - Moved Permanently | **401** - Unauthorized | **501** - Not Implemented
+**204** - No Content | **302** - Found | **404** - Not Found | **503** - Service Unavailable
 
 * **JSON** - Lättviktat språk som används när man skickar kod mellan tex. klient och server.
 * **Postman** - HTTP-klient att testa sitt program med genom att skicka requests. Istället för att använda webbläsaren.
