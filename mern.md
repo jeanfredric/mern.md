@@ -43,6 +43,7 @@ npx create-react-app
 ```
 
 ## Express
+Express är byggt ovanpå HTTP modulen i node. Express gör det enklare att strukturera upp koden på ett bra sätt samt ger lite extra funktionalitet. 
 
 
 ### Middleware
