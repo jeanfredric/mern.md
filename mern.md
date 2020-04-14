@@ -54,10 +54,16 @@ Några vanliga typer av felmeddelanden:
 * **routes/api/** *- Innehåller alla HTTP-routes som kallas från klienten*
 
 ## React
-Installera react genom att gå till din projektmapp och skriv in följande kommando:
+Installera react i en ny mapp "client" genom att gå till din projektmapp och skriv in följande kommando:
 ```
-npx create-react-app
+npx create-react-app client
 ```
+
+Navigera till client-mappen och skriv följande kommande för att köra React:
+```
+npm start
+```
+Installera sedan npm-paketet concurrently för att kunna köra React och Express samtidigt.
 
 Användbara paket går att läsa om nedan:
 
@@ -114,8 +120,7 @@ Gör det möjligt att installera tredjepartspaket. Alla paket finns att läsa om
 * **jsonwebtoken** *- Hjälper till att hålla koll på vem som är inloggad samt avgör vilka routes användaren har tillgång till*
 * **mongoose** *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB, motsvarar DAL*
 * **request** *- Förenklar syntax i samband med HTTP-meddelanden*
-
-*(Vissa av dessa kanske bör tillhöra annat än Node.js dock. Typ mongoose är la MongoDB? Borde vi reda ut)*
+* **npx** *- Gör det möjligt att använda React utan att installera det globalt på datorn.*
 
 Installera alla samtidigt genom följande syntax i terminalen:
 ```
