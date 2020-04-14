@@ -44,6 +44,15 @@ Några vanliga typer av felmeddelanden:
 * **React Hooks** - Tillägg till React som gör det möjligt att skapa states utan att skapa en klass.
 * **Redux** - Underlättar när man har mycket data i React. När man tex. vill dela states mellan komponenter.
 
+### Förslag till filstruktur
+
+* **server.js** *- Main-filen*
+* **config/db.js** *- Koppling till databasen med hjälp av mongoose(?)*
+* **config/default.json** *- *
+* **middleware/** *- Mapp som innehåller egenskapade middleware-funktioner*
+* **Models/** *- Mapp som innehåller alla modeller*
+* **routes/api/** *- Innehåller alla HTTP-routes som kallas från klienten*
+
 ## React
 Installera react genom att gå till din projektmapp och skriv in följande kommando:
 ```
