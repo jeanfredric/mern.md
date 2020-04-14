@@ -86,7 +86,7 @@ Användbara paket går att läsa om nedan:
 * **redux-devtools-extension** *- Ett extension som gör det möjligt att se vilka "states" samt "props" som skickas i web browsern.*
 * **moment** *- Ett extensin som underlättar när det kommer till att spara samt visa datum och tid i javascript*
 * **react-moment** *- Samma som ovan i stort sett*
-* **uuid** *- Något med universiellt ID*
+* **uuid** *- Genererar ett random ID.*
 
 
 ## Express
