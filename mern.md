@@ -58,20 +58,28 @@ Installera react i en ny mapp "client" genom att gå till din projektmapp och sk
 ```
 npx create-react-app client
 ```
+Installera sedan npm-paketet concurrently för att kunna köra React och Express samtidigt:
+```
+npm i concurrently
+```
+Lägg sedan in följande text i package.json:
+```
+"client": "npm start --prefix client",
+"dev": "concurrently \"npm run server\" \"npm run client\""
+```
 
-Navigera till client-mappen och skriv följande kommande för att köra React:
+Navigera till client-mappen och skriv följande kommande för att köra Express (servern) och React (klienten) samtidigt:
 ```
-npm start
+npm run dev
 ```
-Installera sedan npm-paketet concurrently för att kunna köra React och Express samtidigt.
 
 Användbara paket går att läsa om nedan:
 
 * **axios** *- Andvänds för att göra HTTP Requests*
-* **react-router-dom** *- Hanterar routingen inne i react, gör det möjligt att använda sig av dynamisk routing (routing som sker till flera olika sidor istället för endast en "single page*).
+* **react-router-dom** *- Hanterar routingen inne i React, gör det möjligt att använda sig av dynamisk routing (routing som sker till flera olika sidor istället för endast en "single page*).
 * **redux** *- Sparar alla "states" (objekt som kan förändras i din app tex en tickande klocka) i en global butik (eng. store, hehe). Redux gör det enklare att komma åt alla dessa "props" (värden som ska leverars neråt eller uppåt i applikationenn tex det uppdaterade klockslaget).*
 * **react-redux** *- När fölk pratar om att man använder redux så pratar de oftas om båda dessa paketen. Egentligen så används endast redux till att spara saker i butiken (the store, hehe) medan react-redux låter dig koppla dessa "states" till olika komponenter inom react. Redux i sig vet inte ens om att react existerar*
-* **redux-thunk** *- För att förklara thunk på en ganska hög nivå kan man beskriva det enligt följande: Av någon anleding vill man förkjuta en beräkning eller kodexekvering. Se bilden nedan som ett enkeklt exempel*
+* **redux-thunk** *- För att förklara thunk på en ganska hög nivå kan man beskriva det enligt följande: Av någon anleding vill man förkjuta en beräkning eller kodexekvering. Se bilden nedan som ett enkeklt exempel (För att kunna göra async-requests)*
 
 <img src="thunk.jpg" width="650" />
 
