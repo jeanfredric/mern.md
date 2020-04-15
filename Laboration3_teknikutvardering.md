@@ -128,7 +128,7 @@ Singeltrådat (asynkront) vilket innebär att det är väldigt effektiv och snab
 
 #### Importera moduler/paket
 
-```
+```javascript
 const path = require('path'); // Använd core-modulen path i aktuell fil
 const express = require('express'); // Använd npm-paketet "express" i aktuell fil
 const myFile = require('./myFile'); // Importera en fil som du själv har utvecklat
