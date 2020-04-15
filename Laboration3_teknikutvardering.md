@@ -74,7 +74,7 @@ const applikation = document.getElementById('applikation');
 //Vi uppdaterar (renderar) sedan dokumentet med vår nya rubrike genom att skicka in komponenten till det hämtade aplikationsdokumentet.
 ReactDOM.render(<Layout/>, applikation);
 ```
-I den nya uppdateringen av React är det dock möjligt att uppdatera komponenter genom att använda sig av något som kallas **React Hooks**. Detta tillägg gör att man ej behöver skapa separata klasser för att uppdatera en komponent, man skapar istället endast funtioner som uppdaterar komponenterna. Kodmässigt blir det mindre jobb samt mer strukturerat när man anväder sig av hooks. Men ur ett utlärningssyfte kan det vara mer intuitivt att först förstå upplägget genom klasser som kopmonenter.
+I den nya uppdateringen av React är det dock möjligt att uppdatera komponenter genom att använda sig av något som kallas **React Hooks**. Detta tillägg gör att man ej behöver skapa separata klasser för att uppdatera en komponent, man skapar istället endast funtioner som uppdaterar komponenterna. Kodmässigt blir det mindre jobb samt mer strukturerat när man anväder sig av hooks. Men ur ett utlärningssyfte kan det vara mer intuitivt att först förstå upplägget genom klasser som komponenter.
 ## Node.js
 
 * **Vad är Node.js?**
@@ -162,14 +162,37 @@ Express har en inbyggd router. Detta innebär att om man bygger en forum-applika
 ## MongoDB
 
 ### Vad är MongoDB?
-
+MongoDB är en "NoSQL" databas där varje tabell (om man drar paralellen till en relationsdatabas) är ett dokument uppbyggt av "key value pairs" (nyckelvärden) som liknar JSON.
 ### Varför är MongoDB bra?
-
+Fördelen med MongoDB är att man kan anväda sig av dess skal vilket medför att man kan interagera med ett javascript interface. Detta medför att man kan skicka skapa, uppdatera, ta bort data etc från databasen direkt via javascriptkommandon. Eftersom att databasen är uppbyggd med hjälp av nyckevärden behöver man ej i förhand koppla ihop olika tabeller med Primary keys samt Foreign keys. På detta vis blir databasen mer flexibel och enklare att modifiera i efterhand. Största fördelen med MongoDB är dock att man kan kommunicera med den med hjälp av javascript, detta resulterar i att samtilga delar i MERN stacken är uppbyggd med javascript som grund.
 ### Hur använder man MongoDB?
-
+```javascript
+//Om vi har skapat ett objekt i en MongoDB databas kan vi tillexempel lägga in data genom att kalla på följande funktion
+db.tabellnamn.insert
+(
+    //Data som placeras in är skrivet i JSON format där varje objekt innehar ett eget objekt ID
+    {
+        "id" : 1,
+        "Name" : "Janne",
+                "Lärosäte": "Umeå Universitet",
+                "Intressen": "Trolleri"
+    }
+);
+```
 ## Hur kommer jag igång?
 
 * **React**
+Skapa först en ny mapp där projektet ska finnas. "Cd:a" till projektetmappen i din terminal och skriv in:
+```bash
+//Använd node package manager för att installera react
+npm install create-react-app --global
+
+//skapa sedan applikationen genom att skriva 
+create-react-app applikationsnamn
+
+//starta sedan applikationen genom att Cd:a till mappen där applikationen finns och skriv
+npm start
+```
 
 * **Node.js**
 
