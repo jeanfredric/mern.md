@@ -6,9 +6,11 @@ Detta dokument är framplockat av två studenter vid Umeå Universitet som läse
 
 Dokumentet är uppdelat i olika sektioner för att ge en bättre förståelse för hur de olika delarna är uppbydda samt vart koden exekveras. Vi väljer att titta på stacken från "front-end" sidan och arbetar oss sedan igenom stacken för att sedan avsluta med att förklara hur databasen är uppbyggd. 
 
-* **Men vad är då MERN, och varför används denna "stack"?**
-Det som är bra med den här stacken är att man genomgående endast använder JavaScript och JSON. Denna stack består av fyra av fyra teknologier som gör det möjligt att designa och utveckla webbapplikationer på ett snabbt och smidigt vis. MERN stacken är uppbydds av följande komponenter:
+**Men vad är då MERN, och varför används denna "stack"?**
 
+Det som är bra med den här stacken är att man genomgående endast använder JavaScript och JSON. Denna stack består av fyra av fyra teknologier som gör det möjligt att designa och utveckla webbapplikationer på ett snabbt och smidigt vis. 
+
+MERN stacken är uppbydds av följande komponenter:
 Verktyg | Beskrivning
 :--- | :---
 **M**ongoDB | Databas
@@ -34,7 +36,7 @@ All kommunikation (data) som skickas mellan browser, server samt databas skickas
 React.js är ett JavaScript-bibliotek som används för att bygga webbgränssnitt. Biblioteket utvecklades av företagen Facebook samt Instagram och är släppt med öppen källkod. Om vi tittar till designmönster MVC (Model - View - Controller) ser vi att React befinner sig under View-delen.
 
 * **Varför är React bra?**
-** **Virtual DOM**
++ **Virtual DOM**
 
 * **Hur använder man React?**
 
