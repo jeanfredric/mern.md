@@ -6,6 +6,12 @@ Detta dokument går att se som en guide till utvecklingsstacken MERN.
 
 ## React
 
+* ** Vad är React?** *
+
+* ** Varför är React bra? ** *
+
+* ** Hur använder man React? ** *
+
 ## Node.js
 
 ## Express
