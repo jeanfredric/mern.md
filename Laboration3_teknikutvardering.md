@@ -134,6 +134,15 @@ const express = require('express'); // Använd npm-paketet "express" i aktuell f
 const myFile = require('./myFile'); // Importera en fil som du själv har utvecklat
 ```
 
+#### Använda moduler/paket
+
+När önskade moduler/paket är importerat används dem genom de variabler de är satta till. För att använda `path`
+skriver man till exempel `path.function()` där `function()` är en funktion i modulen path. För att se vilka funktioner som går att använda, gå in i modulens/paketets dokumentation på nätet.
+
+#### Användbara paket
+
+* Copy paste
+
 ## Express
 ### Vad är Express?
 
