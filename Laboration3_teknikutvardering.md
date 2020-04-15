@@ -75,13 +75,64 @@ const applikation = document.getElementById('applikation');
 ReactDOM.render(<Layout/>, applikation);
 ```
 I den nya uppdateringen av React är det dock möjligt att uppdatera komponenter genom att använda sig av något som kallas **React Hooks**. Detta tillägg gör att man ej behöver skapa separata klasser för att uppdatera en komponent, man skapar istället endast funtioner som uppdaterar komponenterna. Kodmässigt blir det mindre jobb samt mer strukturerat när man anväder sig av hooks. Men ur ett utlärningssyfte kan det vara mer intuitivt att först förstå upplägget genom klasser som komponenter.
-## Node.js
 
-* **Vad är Node.js?**
+## Node.js 
 
-* **Varför är Node.js bra?**
+### Vad är Node.js?
 
-* **Hur använder man Node.js?**
+Node.js är en Runtime-server som kör JavaScript. 
+
+Node.js är inte ett programmeringsspråk likt C#. Det är inte heller ett ramverk likt ASP.NET.
+Node.js är en körbar miljö som kan exekvera JavaScript. Det används som ett API mellan vyn och databasen i webbapplikationer. 
+
+Förrutom att kunna köra JavaScript back-end består Node.js av ett antal core modules.
+
+#### Core modules
+Detta är moduler som finns direkt efter installationen av Node.js. Varje modul består av ett antal funktioner. Dessa funktioner innehåller den mest grundläggande funktionaliteten för Node.js. Exempel på core modules:
+
+* **HTTP** *- Används för att kommunicera med en webb-klient.*
+* **path** *- Gör att man kan navigera bland filer i den dator som kör Node.js. Sparar även information om filer.*
+* **fs** *- (File System) Ger möjlighet att skapa filer och mappar.*
+
+[Här](https://nodejs.org/dist/latest-v12.x/docs/api/) hittar du alla core modules.
+
+#### Node package manager (npm)
+
+Node.js är open source vilket innebär att det finns mängder av paket skapade av tredjepartsutvecklare. Ett paket kan vara ett ramverk, bibiliotek eller andra verktyg och innehåller likt core-modulerna ett antal funktioner. Många paket bygger på core-modulerna eller på andra npm-paket.
+
+[Här](https://www.npmjs.com/) hittar du alla npm-paket.
+
+#### Egna moduler
+
+Det är även möjli
+
+### Varför är Node.js bra?
+
+Syftet bakom att man skapade Node.js var för att kunna använda JavaScript Back-end. Passar bra till populära front-end-frameworks som kör JavaScript, exempelvis React, Angular och Vue.
+
+Superfast and highly scalable.
+
+Mindre kod.
+
+Färre filer.
+
+Används av stora företag likt PayPal.
+
+Mängder av open-source-bibliotek som man kan använda sig av.
+
+Singeltrådat (asynkront) vilket innebär att det är väldigt effektiv och snabb för mindre appar som inte kräver stora mängder beräkningar.
+
+### Hur använder man Node.js?
+
+#### Installera paket
+
+#### Importera moduler/paket
+
+```
+const path = require('path'); // Använd core-modulen path i aktuell fil
+const express = require('express'); // Använd npm-paketet "express" i aktuell fil
+const myFile = require('./myFile'); // Importera en fil som du själv har utvecklat
+```
 
 ## Express
 ### Vad är Express?
@@ -182,7 +233,7 @@ db.tabellnamn.insert
 ## Hur kommer jag igång?
 
 * **React**
-Skapa först en ny mapp där projektet ska finnas. "Cd:a" till projektetmappen i din terminal och skriv in:
+Skapa först en ny mapp där projektet ska finnas. Navigera till projektetmappen i din terminal och skriv in:
 ```bash
 //Använd node package manager för att installera react
 npm install create-react-app --global
@@ -190,11 +241,28 @@ npm install create-react-app --global
 //skapa sedan applikationen genom att skriva 
 create-react-app applikationsnamn
 
-//starta sedan applikationen genom att Cd:a till mappen där applikationen finns och skriv
+//starta sedan applikationen genom att navigera till mappen där applikationen finns och skriv
 npm start
 ```
 
 * **Node.js**
+
+* Installera node.js på din dator. [Länk](https://nodejs.org/en/)
+* Öppna ett terminalfönster och navigera till en mapp där din applikation ligger/ska ligga.
+* Installera npm:
+```
+npm init
+```
+* Detta skapar en fil `package.json` som fil lagrar namn, version och beroenden mellan olika installerade paket.
+* Installera användbara npm-paket, till exempel:
+```
+npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose request
+```
+* Installera devDependencies som är npm-paket som hjälper endast under utveckling av applikationen, till exempel:
+```
+npm install -D nodemon concurrently
+```
+* Skapa din main-fil `server.js`, förslagsvis genom en editor, ex. Visual Studio Code.
 
 * **Express**
 
