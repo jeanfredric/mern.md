@@ -60,12 +60,50 @@ Användningen av dessa olika extensions samt komponenter gör React till ett vä
 * **Hur använder man Node.js?**
 
 ## Express
+### Vad är Express?
 
-* **Vad är Express?**
+Express är ett tilläggs-paket till Node.js och installeras via npm. Det Node.js's mest populära tillägg. Eftersom Node.js opererar back-end så är även Express back-end.
 
-* **Varför är Express bra?**
+Express är ett ramverk ovanpå Node.js - alltså en samling funktioner skrivna i Node.js. Utan dessa funktioner skulle utvecklaren behöva skriva stora mängder kod för simpla uppgifter. Funktionerna är vanligt förekommande och en funktion kan användas i många olika syften. Utvecklaren adderar sedan egen kod till dessa funktioner för att fylla applikationens syfte.
 
-* **Hur använder man Express?**
+Express syfte i MERN-stacken är att göra det enkelt att ta emot HTTP-requests från front-end (React) och skicka tillbaka HTTP-respons. Express är alltså back-end-serverns API mot front-end.
+
+### Varför är Express bra?
+
+Express gör det enklare och snabbare att utveckla i Node.js.
+
+Ett minimalistiskt exempel: När front-end (React) skickar en HTTP-request krävs följande kod utan Express:
+```javascript
+const server = http.createServer(function(req, res) {
+  if (req.url === ’/’) {
+    res.writeHead(200 { ’Content-Type’ : ’application/json’ });
+    res.end(JSON.stringify(data));
+  }
+});
+```
+Med Express räcker denna kod:
+```javascript
+app.get('/', function(req, res) {
+  res.send(JSON.stringify(data);
+});
+```
+
+I fallet ovan slipper man en if-sats och man slipper skriva och fylla i Content-Type. I en applikation som hanterar ett tiotal olika typer av HTTP-meddelanden blir det snabbt mycket mer att hantera för utvecklaren.
+
+### Hur använder man Express?
+
+#### Request & Response
+
+#### Middleware
+
+#### Routes
+
+Express har en inbyggd router. Detta gör att man kan strukturera sin kod så att HTTP-förfrågningar som om exempelvis profilen i en mapp och HTTP-förfrågningar om ett foruminlägg i en annan.
+
+
+#### Body Parser???
+
+
 
 ## MongoDB
 
@@ -82,5 +120,30 @@ Användningen av dessa olika extensions samt komponenter gör React till ett vä
 * **Node.js**
 
 * **Express**
+
+I server.js:
+```javascript
+// Importera ramverket så att det går att använda
+const express = require('express');
+
+// Tilldela Express till en variabel så att man kan använda Express-funktionerna
+const app = express();
+
+// Ta emot olika typer av HTTP-förfrågningar
+app.get('/login', function(req, res) {
+  // Här kan du manipulera data i den mottagna HTTP-requesten
+  // Här kan du interagera med databasen
+  // Här kan du skicka tillbaka en HTTP-response
+});
+app.post('/login', function(req, res) {
+  // Här kan du manipulera data i den mottagna HTTP-requesten
+  // Här kan du interagera med databasen
+  // Här kan du skicka tillbaka en HTTP-response
+});
+
+// Lyssna efter HTTP-förfrågningar som i det här fallet skickas till port http://localhost:5000/
+app.listen(5000);
+
+```
 
 * **MongoDB**
