@@ -6,7 +6,7 @@ Detta dokument är framplockat av två studenter vid Umeå Universitet som läse
 
 Dokumentet är uppdelat i olika sektioner för att ge en bättre förståelse för hur de olika delarna är uppbydda samt vart koden exekveras. Vi väljer att titta på stacken från "front-end" sidan och arbetar oss sedan igenom stacken för att sedan avsluta med att förklara hur databasen är uppbyggd. 
 
-**Men vad är då MERN, och varför används denna "stack"?**
+### Men vad är då MERN, och varför används denna "stack"?
 
 Det som är bra med den här stacken är att man genomgående endast använder JavaScript och JSON. Denna stack består av fyra av fyra teknologier som gör det möjligt att designa och utveckla webbapplikationer på ett snabbt och smidigt vis. 
 
@@ -32,25 +32,49 @@ All kommunikation (data) som skickas mellan browser, server samt databas skickas
 
 ## React
 
-* **Vad är React?**
-React.js är ett JavaScript-bibliotek som används för att bygga webbgränssnitt. Biblioteket utvecklades av företagen Facebook samt Instagram och är släppt med öppen källkod. Om vi tittar till designmönster MVC (Model - View - Controller) ser vi att React befinner sig under View-delen.
+### Vad är React?
+React.js är ett JavaScript-bibliotek som används för att bygga webbgränssnitt. Biblioteket utvecklades av företagen Facebook samt Instagram och är släppt med öppen källkod. Om vi tittar till designmönster MVC (Model - View - Controller) ser vi att React befinner sig under View-delen. Det vill säga, allt UI som användaren möts av när hen öppnar applikationen är uppbyggt med hjälp av React.
 
-* **Varför är React bra?**
+### Varför är React bra?
 
-**Components** - React använder sig av komponenter för att uppdatera gränssnitttet. Ett exempel på en komponent skulle kunna vara en profilbeskrivning i ett socialt nätverk. När man laddar sidan för att läsa specifikationen om en person laddas informationen upp som en komponent. Det vill säga, informationen inhämtas från databasen och react uppdaterar sedan HTML filen med informationen i en komponent.
+#### Components:
+React använder sig av komponenter för att uppdatera gränssnitttet. I stor sett allt som ska visas för användaren går att betrakta som en kompnenent. Ett exempel på en komponent skulle kunna vara en profilbeskrivning i ett socialt nätverk. När man laddar sidan för att läsa specifikationen om en person laddas informationen upp som en komponent. Det vill säga, informationen inhämtas från databasen och react uppdaterar sedan HTML filen genom att rendera innehållet till webbsidan.
 
-**Virtual DOM:** - Virtual DOM (Document object Model) är en direkt representation av ett DOM objekt. Det virituala dokumentet går att se som en kopia av orginal dokumentet. När en förändring sker i gränssnittet (UI) jämför webbapplikationen förändingen som skedde mellan orginal dokumentet samt det virituella dokumentet. Detta gör att applikationen exekveras snabbt samt gör det möjligt att endast uppdatera specifika delar av gränsnittet istället för att behöva skapa en helt ny layout av HTML filen.
+#### Virtual DOM:
+Virtual DOM (Document object Model) är en direkt representation av ett DOM objekt. Det virituala dokumentet går att se som en kopia av orginal dokumentet. När en förändring sker i gränssnittet (UI) jämför webbapplikationen förändingen som skedde mellan orginal dokumentet samt det virituella dokumentet. Detta gör att applikationen exekveras snabbt samt gör det möjligt att endast uppdatera specifika delar av gränsnittet istället för att behöva skapa en helt ny layout av HTML filen.
 
-**JSX** - JSX står för Javascript XML och är ett HTML samt XML "extension" (utvecklingspaket) till React. Detta paket underlättar hanteringen när det kommer till att skriva komponenter i React.
+#### JSX
+JSX står för Javascript XML och är ett HTML samt XML "extension" (utvecklingspaket) till React. Detta paket underlättar hanteringen när det kommer till att skriva komponenter i React.
 
-**Redux** - Denna del kan ses som en aning komplicerad och svårförståelig om man ej tidigare utvecklat med React. (Om du ej tidigare utvecklat med React och känner att du har svårt att greppa konceptet med hur React fungerar skulle jag avråda dig ifrån att lägga ner alldeles för mycket kraft på att förstå detta segment innan du testat på React och förstått grunden).
-Redux är en extension som används för att underlätta hanteringen av data inom applikationen. Det finns inget krav på att använda sig av denna extension. Om webbapplikationen ej är uppbyggd med någon större datahantering kan det vara att föredra att ej använda sig av denna modell. Översiktligt kan man beskriva Redux som ett moln som finns ovanför applikationslagret som gör det möjligt för olika delar av applikationen att komma åt data. Som ett expemel kan det vara bra för en del av applikationen att komma åt en profilbild som är länkad till en viss profil. En miniatyr denna profilbild kanske sedan ska anvädas när en sökning av användare utförs. Istället för att måste gå igenom flera "lager" innan man kan plocka fram denna bild gör Redux det möjligt för alla komponenter inom applikationen att få tillgång till det som lagras där. Det blir en aning komplicerat innan man förstått uppläget men när man väl förstått konceptet är det väldigt användbart samt tillför ett bättre struktur till koden. 
+#### Redux
+Denna del kan ses som en aning komplicerad och svårförståelig om man ej tidigare utvecklat med React. (Om du ej tidigare utvecklat med React och känner att du har svårt att greppa konceptet med hur React fungerar skulle jag avråda dig ifrån att lägga ner alldeles för mycket kraft på att förstå detta segment innan du testat på React och förstått grunden).
+Redux är ett extension som används för att underlätta hanteringen av data inom applikationen. Det finns inget krav på att använda sig av denna extension. Om webbapplikationen ej är uppbyggd med någon större datahantering kan det vara att föredra att ej använda sig av denna modell. Översiktligt kan man beskriva Redux som ett moln som finns ovanför applikationslagret som gör det möjligt för olika delar av applikationen att komma åt data. Som ett expemel kan det vara bra för en del av applikationen att komma åt en profilbild som är länkad till en viss profil. En miniatyr denna profilbild kanske sedan ska anvädas när en sökning av användare utförs. Istället för att måste gå igenom flera "lager" innan man kan plocka fram denna bild gör Redux det möjligt för alla komponenter inom applikationen att få tillgång till det som lagras där. Det blir en aning komplicerat innan man förstått uppläget men när man väl förstått konceptet är det väldigt användbart samt tillför ett bättre struktur till koden. 
 Redux används för att underlätta datahanteringen inom applikationen. 
 
 Användningen av dessa olika extensions samt komponenter gör React till ett väldigt kraftigt utvecklingsverktyg. När man väl förstår sig på hur React fungerar är det möjligt att utveckla sin kunskap genom att börja använda sig av React Native. Med detta verktyg kan man utveckla Android samt IOS baserade applikationer.
 
-* **Hur använder man React?**
+### Hur använder man React?
+Ett expel på hur det skulle kunna se ut när man ska uppdatera son HTML sidan men någon information går att se i följande kod:
+```javascript
+//Börja med att importera React samt React-dom för att kunna använda sig av dess funktionalitet
+import React from "react";
+import ReactDom from "react-dom";
 
+//Skapa sedan en klass (komponent) som ska uppdatera HTML filen
+class Layout extends React.Component {
+  render() {
+    return (
+      <h1> Detta är en komponent som kommer uppdatera hemsidan med en rubrik >/h>
+    );
+  }
+
+//Om vi sedan säger att vi har en tagg vid namn applikation i HTML dokumentet så uppdaterar vi informationen under den sektionen genom följande kod. Vi börjar med att hämta objektet vid namn applikation och placera detta i en variabel
+const applikation = document.getElementById('applikation');
+
+//Vi uppdaterar (renderar) sedan dokumentet med vår nya rubrike genom att skicka in komponenten till det hämtade aplikationsdokumentet.
+ReactDOM.render(<Layout/>, applikation);
+```
+I den nya uppdateringen av React är det dock möjligt att uppdatera komponenter genom att använda sig av något som kallas **React Hooks**. Detta tillägg gör att man ej behöver skapa separata klasser för att uppdatera en komponent, man skapar istället endast funtioner som uppdaterar komponenterna. Kodmässigt blir det mindre jobb samt mer strukturerat när man anväder sig av hooks. Men ur ett utlärningssyfte kan det vara mer intuitivt att först förstå upplägget genom klasser som kopmonenter.
 ## Node.js
 
 * **Vad är Node.js?**
@@ -137,11 +161,11 @@ Express har en inbyggd router. Detta innebär att om man bygger en forum-applika
 
 ## MongoDB
 
-* **Vad är MongoDB?**
+### Vad är MongoDB?
 
-* **Varför är MongoDB bra?**
+### Varför är MongoDB bra?
 
-* **Hur använder man MongoDB?**
+### Hur använder man MongoDB?
 
 ## Hur kommer jag igång?
 
