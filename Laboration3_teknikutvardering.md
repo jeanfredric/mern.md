@@ -37,10 +37,10 @@ React.js är ett JavaScript-bibliotek som används för att bygga webbgränssnit
 
 ### Varför är React bra?
 
-#### Components:
+#### Components
 React använder sig av komponenter för att uppdatera gränssnitttet. I stor sett allt som ska visas för användaren går att betrakta som en kompnenent. Ett exempel på en komponent skulle kunna vara en profilbeskrivning i ett socialt nätverk. När man laddar sidan för att läsa specifikationen om en person laddas informationen upp som en komponent. Det vill säga, informationen inhämtas från databasen och react uppdaterar sedan HTML filen genom att rendera innehållet till webbsidan.
 
-#### Virtual DOM:
+#### Virtual DOM
 Virtual DOM (Document object Model) är en direkt representation av ett DOM objekt. Det virituala dokumentet går att se som en kopia av orginal dokumentet. När en förändring sker i gränssnittet (UI) jämför webbapplikationen förändingen som skedde mellan orginal dokumentet samt det virituella dokumentet. Detta gör att applikationen exekveras snabbt samt gör det möjligt att endast uppdatera specifika delar av gränsnittet istället för att behöva skapa en helt ny layout av HTML filen.
 
 #### JSX
@@ -77,15 +77,10 @@ ReactDOM.render(<Layout/>, applikation);
 I den nya uppdateringen av React är det dock möjligt att uppdatera komponenter genom att använda sig av något som kallas **React Hooks**. Detta tillägg gör att man ej behöver skapa separata klasser för att uppdatera en komponent, man skapar istället endast funtioner som uppdaterar komponenterna. Kodmässigt blir det mindre jobb samt mer strukturerat när man anväder sig av hooks. Men ur ett utlärningssyfte kan det vara mer intuitivt att först förstå upplägget genom klasser som komponenter.
 
 ## Node.js 
-
 ### Vad är Node.js?
 
-Node.js är en Runtime-server som kör JavaScript. 
-
 Node.js är inte ett programmeringsspråk likt C#. Det är inte heller ett ramverk likt ASP.NET.
-Node.js är en körbar miljö som kan exekvera JavaScript. Det används som ett API mellan vyn och databasen i webbapplikationer. 
-
-Förrutom att kunna köra JavaScript back-end består Node.js av ett antal core modules.
+Node.js är en körbar miljö som kan exekvera JavaScript. Det används som ett API mellan vyn och databasen i webbapplikationer. Förrutom att kunna köra JavaScript back-end består Node.js av ett antal core modules.
 
 #### Core modules
 Detta är moduler som finns direkt efter installationen av Node.js. Varje modul består av ett antal funktioner. Dessa funktioner innehåller den mest grundläggande funktionaliteten för Node.js. Exempel på core modules:
@@ -98,33 +93,13 @@ Detta är moduler som finns direkt efter installationen av Node.js. Varje modul 
 
 #### Node package manager (npm)
 
-Node.js är open source vilket innebär att det finns mängder av paket skapade av tredjepartsutvecklare. Ett paket kan vara ett ramverk, bibiliotek eller andra verktyg och innehåller likt core-modulerna ett antal funktioner. Många paket bygger på core-modulerna eller på andra npm-paket.
-
-[Här](https://www.npmjs.com/) hittar du alla npm-paket.
-
-#### Egna moduler
-
-Det är även möjli
+Node.js är open-source vilket innebär att det finns mängder av paket skapade av tredjepartsutvecklare. Ett paket kan vara ett ramverk, bibiliotek eller andra verktyg och innehåller likt core-modulerna ett antal funktioner. Många paket bygger på core-modulerna eller på andra npm-paket. [Här](https://www.npmjs.com/) hittar du alla npm-paket.
 
 ### Varför är Node.js bra?
 
-Syftet bakom att man skapade Node.js var för att kunna använda JavaScript Back-end. Passar bra till populära front-end-frameworks som kör JavaScript, exempelvis React, Angular och Vue.
-
-Superfast and highly scalable.
-
-Mindre kod.
-
-Färre filer.
-
-Används av stora företag likt PayPal.
-
-Mängder av open-source-bibliotek som man kan använda sig av.
-
-Singeltrådat (asynkront) vilket innebär att det är väldigt effektiv och snabb för mindre appar som inte kräver stora mängder beräkningar.
+JavaScript är det vanligaste språket inom Front-end-utveckling och syftet bakom Node.js är att kunna använda JavaScript även Back-end. Tillsammans med ramverket Express är ett av de mest använda på marknaden. Det finns därför stor efterfrågan efter utvecklare med kunskap i Node.js. Node.js är känt för att vara väldigt snabbt och effektivt. En anledning är att Node.js är singeltrådat (asynkront) vilket innebär att det är väldigt effektiv och snabb för mindre appar som inte kräver stora mängder beräkningar.
 
 ### Hur använder man Node.js?
-
-#### Installera paket
 
 #### Importera moduler/paket
 
@@ -143,16 +118,23 @@ skriver man till exempel `path.function()` där `function()` är en funktion i m
 
 #### Användbara paket
 
-* Copy paste
+* **express** *- Ramverkt med funktioner som underlättar användningen av Node.js.*
+* **express-validator** *- Funktioner som gör det möjlighet att validera data (lösenord, användarnamn etc) från vyn.*
+* **npx** *- Gör det möjligt att använda React utan att installera det globalt på datorn.*
+* **jsonwebtoken** *- Hjälper till att hålla koll på vem som är inloggad samt avgör vilka routes användaren har tillgång till*
+* **bcryptjs** *- Verktyg för att kryptera lösenord.*
+* **config** *- Ger möjlighet att spara globala variabler.*
+* **gravatar** *- Hämtar en avatar om användarens email är kopplat till gravatar.*
+* **request** *- Förenklar syntax i samband med HTTP-meddelanden.*
+* **mongoose** *- Innehåller funktioner som underlättar gränssnittet mellan Node.js och MongoDB. Likt DAL:et i ASP.NET.*
+
+* **concurrently** *- Gör det möjligt att köra React och Express samtidigt*
+* **nodemon** *- Gör att man inte måste starta om servern vid varje ändring*
 
 ## Express
 ### Vad är Express?
 
-Express är ett tilläggs-paket till Node.js och installeras via npm. Det Node.js's mest populära tillägg. Eftersom Node.js opererar back-end så är även Express back-end.
-
-Express är ett ramverk ovanpå Node.js - alltså en samling funktioner skrivna i Node.js. Utan dessa funktioner skulle utvecklaren behöva skriva stora mängder kod för simpla uppgifter. Funktionerna är vanligt förekommande och en funktion kan användas i många olika syften. Utvecklaren adderar sedan egen kod till dessa funktioner för att fylla applikationens syfte.
-
-Express syfte i MERN-stacken är att göra det enkelt att ta emot HTTP-requests från front-end (React) och skicka tillbaka HTTP-respons. Express är alltså back-end-serverns API mot front-end.
+Express är ett paket som installeras till Node.js via npm. Det Node.js's mest populära paket. Eftersom Node.js opererar back-end så är även Express back-end. Express är ett ramverk ovanpå Node.js - alltså en samling funktioner skrivna i Node.js. Utan dessa funktioner skulle utvecklaren behöva skriva stora mängder kod för simpla uppgifter. Funktionerna är vanligt förekommande och en funktion kan användas i många olika syften. Utvecklaren adderar sedan egen kod till dessa funktioner för att fylla applikationens syfte. Express syfte i MERN-stacken är att göra det enkelt att ta emot HTTP-requests från front-end (React) och skicka tillbaka HTTP-respons. Express är alltså back-end-serverns API mot front-end.
 
 ### Varför är Express bra?
 
@@ -208,21 +190,17 @@ router.post('/login', auth, (req, res) => {
 });
 ```
 Man kan även köra flera middleware-funktioner:
-
 ```javascript
 router.post('/login', [auth, check], (req, res) => {
   // Middleware har redan exekverats
 });
 ```
-
 Exempel på när middleware är bra att använda är när en användare vill komma åt en privat sida låst endast till en användare. Middleware kan då kontrollera ifall användaren har tillträde till den sidan.
 
 #### Routes
-
 Express har en inbyggd router. Detta innebär att om man bygger en forum-applikation så kan man separera HTTP-förfrågningar (routes) om profilen i en fil och HTTP-förfrågningar om inlägg i en annan. När man kommer upp i ett antal HTTP-requests underlättar denna struktur.
 
 ## MongoDB
-
 ### Vad är MongoDB?
 MongoDB är en "NoSQL" databas där varje tabell (om man drar paralellen till en relationsdatabas) är ett dokument uppbyggt av "key value pairs" (nyckelvärden) som liknar JSON.
 ### Varför är MongoDB bra?
@@ -243,20 +221,7 @@ db.tabellnamn.insert
 ```
 ## Hur kommer jag igång?
 
-* **React**
-Skapa först en ny mapp där projektet ska finnas. Navigera till projektetmappen i din terminal och skriv in:
-```bash
-//Använd node package manager för att installera react
-npm install create-react-app --global
-
-//skapa sedan applikationen genom att skriva 
-create-react-app applikationsnamn
-
-//starta sedan applikationen genom att navigera till mappen där applikationen finns och skriv
-npm start
-```
-
-* **Node.js**
+### Node.js
 
 * Installera node.js på din dator. [Länk](https://nodejs.org/en/)
 * Öppna ett terminalfönster och navigera till en mapp där din applikation ligger/ska ligga.
@@ -275,9 +240,8 @@ npm install -D nodemon concurrently
 ```
 * Skapa din main-fil `server.js`, förslagsvis genom en editor, ex. Visual Studio Code.
 
-* **Express**
-
-I server.js:
+### Express
+* I `server.js` skriver du följande kod:
 ```javascript
 // Importera ramverket så att det går att använda
 const express = require('express');
@@ -299,14 +263,32 @@ app.post('/login', function(req, res) {
 
 // Lyssna efter HTTP-förfrågningar som i det här fallet skickas till port http://localhost:5000/
 app.listen(5000);
-
 ```
+* Teststarta servern genom att skriva i terminalen:
+```npm run nodemon server```
 
-* **MongoDB**
+
+### MongoDB
+
+Tjena! Denna borde vi göra lite mer utförlig, likt video 7 i Udemy????
+
 ```javascript
 //Skapa enkelt en databas genom kommandot
 use databas_namn
 
 //Du kan sedan lägga in tabeller (objekt) genom att skriva
 databas_namn.createCollection("tabellNamn");
+```
+
+
+### React
+* Navigera till projektetmappen i din terminal och skriv:
+```bash``` 
+* Använd node package manager för att installera react:
+```npm install create-react-app --global```
+* Skapa sedan applikationen genom att skriva 
+```create-react-app applikationsnamn```
+* Starta sedan applikationen genom att navigera till mappen där applikationen finns och skriv
+```
+npm start
 ```
