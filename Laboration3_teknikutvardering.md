@@ -283,11 +283,17 @@ databas_namn.createCollection("tabellNamn");
 
 ### React
 * Navigera till projektetmappen i din terminal och skriv:
-```bash``` 
+```
+bash
+``` 
 * Använd node package manager för att installera react:
-```npm install create-react-app --global```
+```
+npm install create-react-app --global
+```
 * Skapa sedan applikationen genom att skriva 
-```create-react-app applikationsnamn```
+```
+create-react-app applikationsnamn
+```
 * Starta sedan applikationen genom att navigera till mappen där applikationen finns och skriv
 ```
 npm start
