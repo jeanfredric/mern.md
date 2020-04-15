@@ -224,3 +224,10 @@ app.listen(5000);
 ```
 
 * **MongoDB**
+```javascript
+//Skapa enkelt en databas genom kommandot
+use databas_namn
+
+//Du kan sedan lägga in tabeller (objekt) genom att skriva
+databas_namn.createCollection("tabellNamn");
+```
