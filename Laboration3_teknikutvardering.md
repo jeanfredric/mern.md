@@ -128,6 +128,8 @@ Singeltrådat (asynkront) vilket innebär att det är väldigt effektiv och snab
 
 #### Importera moduler/paket
 
+För varje fil som ska använda en modul/paket, importera det genom:
+
 ```javascript
 const path = require('path'); // Använd core-modulen path i aktuell fil
 const express = require('express'); // Använd npm-paketet "express" i aktuell fil
@@ -136,8 +138,8 @@ const myFile = require('./myFile'); // Importera en fil som du själv har utveck
 
 #### Använda moduler/paket
 
-När önskade moduler/paket är importerat används dem genom de variabler de är satta till. För att använda `path`
-skriver man till exempel `path.function()` där `function()` är en funktion i modulen path. För att se vilka funktioner som går att använda, gå in i modulens/paketets dokumentation på nätet.
+När önskade moduler/paket är importerade används dem genom de variabler de är satta till. För att använda `path`
+skriver man till exempel `path.function()` där `function()` är en funktion i modulen `path`. För att se vilka funktioner som går att använda, gå in i modulens/paketets dokumentation på nätet.
 
 #### Användbara paket
 
