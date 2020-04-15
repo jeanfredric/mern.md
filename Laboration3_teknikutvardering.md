@@ -265,7 +265,9 @@ app.post('/login', function(req, res) {
 app.listen(5000);
 ```
 * Teststarta servern genom att skriva i terminalen:
-```npm run nodemon server```
+```
+npm run nodemon server
+```
 
 
 ### MongoDB
