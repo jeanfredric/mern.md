@@ -72,7 +72,7 @@ Express syfte i MERN-stacken är att göra det enkelt att ta emot HTTP-requests 
 
 Express gör det enklare och snabbare att utveckla i Node.js.
 
-Ett minimalistiskt exempel: När front-end (React) skickar en HTTP-request krävs följande kod utan Express:
+Ett exempel är när front-end (React) skickar en HTTP-request. Då krävs följande kod utan Express:
 ```javascript
 const server = http.createServer(function(req, res) {
   if (req.url === ’/’) {
@@ -94,16 +94,46 @@ I fallet ovan slipper man en if-sats och man slipper skriva och fylla i Content-
 
 #### Request & Response
 
+Som beskrivet ovan hanterar Express HTTP-förfrågningar från front-end (React). För att kunna använda express måste man först initiera en variabel för att ha tillgång till alla funktioner. 
+```javascript
+const app = express();
+```
+Sedan väljer man vilken typ av HTTP-förfrågan som tas emot, i fallet nedan är det en POST-förfrågan. Fyll sedan i till vilken route förfrågan skickas (i det här fallet '/login'). Inuti get-funktionen kan man sedan manipulera HTTP-requesten `req` och HTTP-response `res`.
+```javascript
+app.post('/login', function(req, res) {
+  if (req.user.id === id) {
+    res.send(JSON.stringify(error);
+  }
+  res.send(JSON.stringify(success);
+});
+```
 #### Middleware
+
+Om man vill kalla på en funktion direkt man tar emot en HTTP-request kan man använda middleware. Middleware är funktioner som har tillgång till HTTP-reqeust och HTTP-response-objekten.
+
+* Express har inbyggd middleware
+* Man kan bygga egna middleware
+* Det finns tredjeparts middleware
+
+I samband med att man tar emot en HTTP-request från klienten så kan man kalla på denna middleware-funktionen. I exemplet nedan kallar vi på en middleware-funktion `auth` innan requesten hanteras:
+```javascript
+router.post('/login', auth, (req, res) => {
+  // Middleware har redan exekverats
+});
+```
+Man kan även köra flera middleware-funktioner:
+
+```javascript
+router.post('/login', [auth, check], (req, res) => {
+  // Middleware har redan exekverats
+});
+```
+
+Exempel på när middleware är bra att använda är när en användare vill komma åt en privat sida låst endast till en användare. Middleware kan då kontrollera ifall användaren har tillträde till den sidan.
 
 #### Routes
 
-Express har en inbyggd router. Detta gör att man kan strukturera sin kod så att HTTP-förfrågningar som om exempelvis profilen i en mapp och HTTP-förfrågningar om ett foruminlägg i en annan.
-
-
-#### Body Parser???
-
-
+Express har en inbyggd router. Detta innebär att om man bygger en forum-applikation så kan man separera HTTP-förfrågningar (routes) om profilen i en fil och HTTP-förfrågningar om inlägg i en annan. När man kommer upp i ett antal HTTP-requests underlättar denna struktur.
 
 ## MongoDB
 
