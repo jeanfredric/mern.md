@@ -321,6 +321,5 @@ npm run dev
 ```
 npm i axios react-router-dom redux react-redux redux-thunk redux-devtools-extension moment react-moment
 ```
-```
 
 **Du är nu redo att utveckla en sprillans ny MERN-applikation!**
