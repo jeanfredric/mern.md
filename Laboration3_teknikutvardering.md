@@ -8,8 +8,6 @@ Dokumentet är uppdelat i olika sektioner för att ge en bättre förståelse f�
 
 ### Men vad är då MERN, och varför används denna "stack"?
 
-Det som är bra med den här stacken är att man genomgående endast använder JavaScript och JSON. Denna stack består av fyra av fyra teknologier som gör det möjligt att designa och utveckla webbapplikationer på ett snabbt och smidigt vis. 
-
 MERN stacken är uppbydds av följande komponenter:
 Verktyg | Beskrivning
 :--- | :---
@@ -20,15 +18,20 @@ Verktyg | Beskrivning
 
 För att få en bättre överblick vilka program som exekverar vart kan vi titta på nedstående bild. 
 
-På klientsidan av programmet (view) arbetar **R**eact. Denna del står för all UI som användaren möts av.
+#### Front-end
 
-På seversidan arbetar resterande program. **N**ode.js och **N**ode package manager (npm) är en open source plattform som exekverar på serversidan. Node.js gör det möjligt att exekvera javascriptkod direkt på servern, utöver detta har plattformen väldigt många användbara framework att utnyttja (om du ska utföra någon specifik uppgift är det väldigt stor chans att någon annan redan skapat ett framework för att utöfra just denna uppgift). 
+På klientsidan av programmet (view) arbetar **React**. Denna del ansvarar för UI som användaren möts av.
 
-Ett av dessa framework är **E**xpress, detta framework gör det möjligt att hantera POST, GET, DELETE osv på specifika "router". Utöver detta tillhandahåller den flera andra användbara funktionaliteter såsom att göra de möjligt att lägga in **M**iddleware (detta går att läsa mer om under sektionen Express).
+#### Back-end
+På seversidan arbetar resterande program. **Node.js** gör det möjligt att exekvera JavaScript-kod direkt på servern. Utöver detta har plattformen väldigt många användbara tilläggspaket att utnyttja (om du ska utföra någon specifik uppgift är det väldigt stor chans att någon annan redan skapat ett framework för att utöfra just denna uppgift). 
 
-**M**ongoDB körs ofta på en separat server och fungerar som databas för att lagra data. MongoDB **A**tlas är en molnbaserad databas som kan användas av alla som innhar nyckeln till databasern.
+Ett av dessa paket är **Express**. Detta ramverk ansvarar framförallt för att förenkla kommunikationen mellan React och Node.js, men har även ytterligare funktionalitet.
 
-All kommunikation (data) som skickas mellan browser, server samt databas skickas i **J**SON format. JSON är ett kompakt textbaserat fomat som lämpar sig väl för att skickas mellan olika klienter.
+**MongoDB** körs ofta på en separat server och fungerar som databas för att lagra data. **MongoDB Atlas** är en molnbaserad variant av databasen.
+
+### Varför är MERN bra?
+
+Den stora fördelen med stacken är att man genomgående endast använder JavaScript och JSON. Stacken består av fyra teknologier som gör det möjligt att designa och utveckla webbapplikationer snabbt och smidigt.
 
 ### Förkunskap
 
