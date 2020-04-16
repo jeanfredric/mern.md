@@ -209,19 +209,59 @@ Express har en inbyggd router. Detta innebär att om man bygger en forum-applika
 MongoDB är en "NoSQL" databas där varje tabell (om man drar paralellen till en relationsdatabas) är ett dokument uppbyggt av "key value pairs" (nyckelvärden) som liknar JSON.
 ### Varför är MongoDB bra?
 Fördelen med MongoDB är att man kan anväda sig av dess skal vilket medför att man kan interagera med ett javascript interface. Detta medför att man kan skicka skapa, uppdatera, ta bort data etc från databasen direkt via javascriptkommandon. Eftersom att databasen är uppbyggd med hjälp av nyckevärden behöver man ej i förhand koppla ihop olika tabeller med Primary keys samt Foreign keys. På detta vis blir databasen mer flexibel och enklare att modifiera i efterhand. Största fördelen med MongoDB är dock att man kan kommunicera med den med hjälp av javascript, detta resulterar i att samtilga delar i MERN stacken är uppbyggd med javascript som grund.
+
+#### Mongoose
+En av fördelarna med MongoDB är att man kan anväda sig av tilläggsbiblioteket mongoose. Mongoose ger ytterligare javascriptfuntionalitet till databasen och tillhandahåller "schema" validering.
+
+
 ### Hur använder man MongoDB?
+
+* Börja med ett skapa en klass vi namn Profile innehållande ditt "schema" (dvs ditt objekt som ska sparar i databsen)
 ```javascript
-//Om vi har skapat ett objekt i en MongoDB databas kan vi tex lägga in data genom att kalla på följande funktion
-db.tabellnamn.insert
-(
-    //Data som placeras in är skrivet i JSON format där varje objekt innehar ett eget objekt ID
-    {
-        "id" : 1,
-        "Name" : "Janne",
-                "Lärosäte": "Umeå Universitet",
-                "Intressen": "Trolleri"
-    }
-);
+//Implementera mongoose
+var mongoose = require('mongoose');
+
+//Skapa din tabell/objekt som ska finnas i databasen
+const ProfileSchema = new mongoose.Schema({
+	user: {
+		type: string,
+		required: true
+	},
+	company: {
+		type: String
+	},
+	bio: {
+		type: String
+	},
+	date: {
+		type: Date,
+		default: Date.now
+	}
+});
+
+//För att kunna använda vårt "schema" måste vi konvertera om detta till en model
+Profile = mongoose.model('profile', ProfileSchema);
+
+//Värt att notera är att mongoose automatiskt lägger till ett _id till ditt schema
+```
+* Du kan sedan enkelt lägga in en profil i databasen genom att göra följande:
+
+```javascript
+//Lägg in informationen till Profilen
+profile = new Profile({
+  user: Janne Jannesson,
+  company: UX Design AB,
+  bio: Hej, jag jobbar med UX Design
+ });
+ 
+ //Spara sedan ned den nya profilen till databasen med en await förfrågan
+ try{
+    await profile.save();
+ catch(err){
+    console.error(err.message);
+    res.status(500).send('Server error');
+  }
+ 
 ```
 ## Hur kommer jag igång?
 
@@ -280,7 +320,7 @@ npm run nodemon server
 ### MongoDB
 För att använda sig av den molnbaserade databasen MongoDB Atlas utför följande steg.
 
-* Skapa en användare på hemsidan [MongoDB] (https://www.mongodb.com/cloud/atlas): (Om du endast ska bygga en prototyp behöver du ej någon betalvariant av tjänsten.
+* Skapa en användare på hemsidan [MongoDB](https://www.mongodb.com/cloud/atlas) (Om du endast ska bygga en prototyp behöver du ej någon betalvariant av tjänsten.
 
 * Antingen väljer du att sköta uppkopplingen till databasen i server.js filen eller så väljer du att göra detta i en separat javascript fil för att hålla bättre kodstuktur. 
 
@@ -308,10 +348,6 @@ const connectDB = async () => {
 
 
 ### React
-* Navigera till projektetmappen i din terminal och skriv:
-```
-bash ****** Windows-grej??
-``` 
 * Använd node package manager för att installera react:
 ```
 npm install create-react-app --global
