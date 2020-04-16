@@ -30,10 +30,20 @@ Ett av dessa framework är **E**xpress, detta framework gör det möjligt att ha
 
 All kommunikation (data) som skickas mellan browser, server samt databas skickas i **J**SON format. JSON är ett kompakt textbaserat fomat som lämpar sig väl för att skickas mellan olika klienter.
 
-## React
+### Förkunskap
 
+Det underlättar om man har grundläggande kompetens inom följande områden innan man börjar med MERN:
+
+#### JavaScript
+Hela stacken bygger på detta språk. Om man har tidigare koderfarenhet men är novis inom JavaScript kan det vara en idé att lära sig [async/await](https://www.youtube.com/watch?v=PoRJizFvM7s) och [arrow functions](https://www.youtube.com/watch?v=u4URamXstM0).
+#### JSON
+Lättviktat språk som används när man skickar data mellan klient, server och databas. Se en introduktion [här](https://www.youtube.com/watch?v=wI1CWzNtE-M&t=1241s).
+#### HTTP
+Då man kommer att skicka och ta emot HTTP-meddelanden bör man känna till protokollets uppbyggnad. Se en överblick [här](https://www.youtube.com/watch?v=iYM2zFP3Zn0).
+
+## React
 ### Vad är React?
-React.js är ett JavaScript-bibliotek som används för att bygga webbgränssnitt. Biblioteket utvecklades av företagen Facebook samt Instagram och är släppt med öppen källkod. Om vi tittar till designmönster MVC (Model - View - Controller) ser vi att React befinner sig under View-delen. Det vill säga, allt UI som användaren möts av när hen öppnar applikationen är uppbyggt med hjälp av React.
+React.js är ett JavaScript-**bibliotek** som används för att bygga webbgränssnitt -  det vill säga färdiga funktioner redo att användas för utvecklare. Biblioteket utvecklades av företagen Facebook samt Instagram och är släppt med öppen källkod. Om vi tittar till designmönster MVC (Model - View - Controller) ser vi att React befinner sig under View-delen. Det vill säga, allt UI som användaren möts av när hen öppnar applikationen är uppbyggt med hjälp av React.
 
 ### Varför är React bra?
 
@@ -134,7 +144,7 @@ skriver man till exempel `path.function()` där `function()` är en funktion i m
 ## Express
 ### Vad är Express?
 
-Express är ett paket som installeras till Node.js via npm. Det Node.js's mest populära paket. Eftersom Node.js opererar back-end så är även Express back-end. Express är ett ramverk ovanpå Node.js - alltså en samling funktioner skrivna i Node.js. Utan dessa funktioner skulle utvecklaren behöva skriva stora mängder kod för simpla uppgifter. Funktionerna är vanligt förekommande och en funktion kan användas i många olika syften. Utvecklaren adderar sedan egen kod till dessa funktioner för att fylla applikationens syfte. Express syfte i MERN-stacken är att göra det enkelt att ta emot HTTP-requests från front-end (React) och skicka tillbaka HTTP-respons. Express är alltså back-end-serverns API mot front-end.
+Express är ett paket som installeras till Node.js via npm. Det Node.js's mest populära paket. Eftersom Node.js opererar back-end så är även Express back-end. Express är ett **ramverk** ovanpå Node.js - alltså en samling funktioner skrivna i Node.js. Utan dessa funktioner skulle utvecklaren behöva skriva stora mängder kod för simpla uppgifter. Funktionerna är vanligt förekommande och en funktion kan användas i många olika syften. Utvecklaren adderar sedan egen kod till dessa funktioner för att fylla applikationens specifika syfte och det är det som skiljer ett **ramverk** från ett **bibliotek** som endast består av färdiga funktioner. Express syfte i MERN-stacken är att göra det enkelt att ta emot HTTP-requests från front-end (React) och skicka tillbaka HTTP-respons. Express är alltså back-end-serverns API mot front-end.
 
 ### Varför är Express bra?
 
@@ -264,7 +274,7 @@ app.post('/login', function(req, res) {
 // Lyssna efter HTTP-förfrågningar som i det här fallet skickas till port http://localhost:5000/
 app.listen(5000);
 ```
-* Teststarta servern genom att skriva i terminalen:
+* Back-end-servern är nu redo att användas. Teststarta servern genom att skriva i terminalen:
 ```
 npm run nodemon server
 ```
