@@ -244,7 +244,7 @@ npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose r
 npm install -D nodemon concurrently
 ```
 * Skapa din main-fil `server.js`, förslagsvis genom en editor, ex. Visual Studio Code.
-* Öppna filen `package.json` och lägg in följande kod i ´"scripts"´:
+* Öppna filen `package.json` och lägg in följande kod i `"scripts"`:
 ```javascript
 "start": "node server"
 "server": "nodemon server"
@@ -300,7 +300,7 @@ databas_namn.createCollection("tabellNamn");
 ```
 bash ****** Windows-grej??
 ``` 
-* Använd node package manager för att installera react:
+* Använd node package manager för att installera React:
 ```
 npm install create-react-app --global
 ```
@@ -313,7 +313,7 @@ create-react-app applikationsnamn
 ```
 npm start
 ```
-* För att köra React och Node.js samtidigt använder vi oss av devDependencies concurrently som installerades tidigare via npm. För att detta ska fungera, öppna filen `package.json` och lägg in följande kod i ´"scripts"´:
+* För att köra React och Node.js samtidigt använder vi oss av devDependencies concurrently som installerades tidigare via npm. För att detta ska fungera, öppna filen `package.json` och lägg in följande kod i `"scripts"`:
 ```javascript
 "client": "npm start --prefix client", 
 "dev": "concurrently \"npm run server\" \"npm run client\""
@@ -322,7 +322,7 @@ npm start
 ```
 npm run dev
 ```
-* Du kan nu även installera npm-paket som underlättar i React, till exempel (läs mer om paketen hos [npm](https://www.npmjs.com/)).:
+* Du kan nu även installera npm-paket som underlättar i React, till exempel (läs mer om paketen hos [npm](https://www.npmjs.com/)):
 ```
 npm i axios react-router-dom redux react-redux redux-thunk redux-devtools-extension moment react-moment
 ```
