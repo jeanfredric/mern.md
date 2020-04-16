@@ -1,7 +1,7 @@
 # Teknikutvärderingsrapport
 Detta dokument är framplockat av två studenter vid Umeå Universitet som läser kursen Applikationsutveckling för Internet. Syftet med dokumentet är att ge en inblickande guide till hur utvecklingsstacken MERN är uppbyggd samt hur man går tillväga för att skapa ett nytt projekt.
 
-Dokumentet är uppdelat i olika sektioner för att ge en bättre förståelse för hur de olika delarna är uppbydda samt vart koden exekveras. Vi väljer att titta på stacken från "front-end" sidan och arbetar oss sedan igenom stacken för att sedan avsluta med att förklara hur databasen är uppbyggd.
+Dokumentet är uppdelat i olika sektioner för att ge en bättre förståelse för hur de olika delarna är uppbydda samt vart koden exekveras. Vi väljer att titta på stacken från Front-end och arbetar oss sedan igenom stacken för att sedan avsluta med att förklara hur databasen är uppbyggd.
 
 <img src="MERN-2.png" width="1000" />
 
@@ -38,24 +38,26 @@ Det underlättar om man har grundläggande kompetens inom följande områden inn
 
 ## React
 ### Vad är React?
-React.js är ett JavaScript-**bibliotek** som används för att bygga webbgränssnitt -  det vill säga färdiga funktioner redo att användas för utvecklare. Biblioteket utvecklades av företagen Facebook samt Instagram och är släppt med öppen källkod. Om vi tittar till designmönster MVC (Model - View - Controller) ser vi att React befinner sig under View-delen. Det vill säga, allt UI som användaren möts av när hen öppnar applikationen är uppbyggt med hjälp av React.
+React.js är ett JavaScript-**bibliotek** som används för att bygga webbgränssnitt -  det vill säga färdiga funktioner redo att användas för utvecklare. Biblioteket utvecklades av Facebook och Instagram och är släppt med öppen källkod. Om vi tittar till designmönster MVC (Model - View - Controller) ser vi att React befinner sig under View-delen. Det vill säga den UI som användaren möts av när hen öppnar en applikation byggd med MERN-stacken.
 
 ### Varför är React bra?
 
 #### Components
-React använder sig av komponenter för att uppdatera gränssnitttet. I stor sett allt som ska visas för användaren går att betrakta som en kompnenent. Ett exempel på en komponent skulle kunna vara en profilbeskrivning i ett socialt nätverk. När man laddar sidan för att läsa specifikationen om en person laddas informationen upp som en komponent. Det vill säga, informationen inhämtas från databasen och react uppdaterar sedan HTML filen genom att rendera innehållet till webbsidan.
+React använder sig av komponenter för att uppdatera gränssnittet. I stor sett allt som ska visas för användaren går att betrakta som en kompnenent. Ett exempel på en komponent är en profilbeskrivning i ett socialt nätverk. När man laddar sidan för att läsa specifikationen om en person laddas informationen upp som en komponent. Det vill säga, informationen inhämtas från databasen och react uppdaterar sedan HTML filen genom att rendera innehållet till webbsidan.
 
 #### Virtual DOM
-Virtual DOM (Document object Model) är en direkt representation av ett DOM objekt. Det virituala dokumentet går att se som en kopia av orginal dokumentet. När en förändring sker i gränssnittet (UI) jämför webbapplikationen förändingen som skedde mellan orginal dokumentet samt det virituella dokumentet. Detta gör att applikationen exekveras snabbt samt gör det möjligt att endast uppdatera specifika delar av gränsnittet istället för att behöva skapa en helt ny layout av HTML filen.
+Virtual DOM (Document Object Model) är en direkt representation av ett DOM-objekt. Det virtuella dokumentet går att se som en kopia av orginaldokumentet. När en förändring sker i gränssnittet (UI) jämför webbapplikationen förändingen som skedde mellan orginaldokumentet och det virituella dokumentet. Detta gör att applikationen exekverar snabbt samt gör det möjligt att endast uppdatera specifika delar av gränsnittet istället för att behöva skapa en helt ny layout av HTML filen.
 
 #### JSX
-JSX står för Javascript XML och är ett HTML samt XML "extension" (utvecklingspaket) till React. Detta paket underlättar hanteringen när det kommer till att skriva komponenter i React.
+JSX står för Javascript XML och är ett HTML samt XML-"extension" (utvecklingspaket) till React. Detta paket underlättar hanteringen när det kommer till att skriva komponenter i React.
 
 #### Redux
 Denna del kan ses som en aning komplicerad och svårförståelig om man ej tidigare utvecklat med React. (Om du ej tidigare utvecklat med React och känner att du har svårt att greppa konceptet med hur React fungerar skulle jag avråda dig ifrån att lägga ner alldeles för mycket kraft på att förstå detta segment innan du testat på React och förstått grunden).
-Redux är ett extension som används för att underlätta hanteringen av data inom applikationen. Det finns inget krav på att använda sig av denna extension. Om webbapplikationen ej är uppbyggd med någon större datahantering kan det vara att föredra att ej använda sig av denna modell. Översiktligt kan man beskriva Redux som ett moln som finns ovanför applikationslagret som gör det möjligt för olika delar av applikationen att komma åt data. Som ett expemel kan det vara bra för en del av applikationen att komma åt en profilbild som är länkad till en viss profil. En miniatyr denna profilbild kanske sedan ska anvädas när en sökning av användare utförs. Istället för att måste gå igenom flera "lager" innan man kan plocka fram denna bild gör Redux det möjligt för alla komponenter inom applikationen att få tillgång till det som lagras där. Det blir en aning komplicerat innan man förstått uppläget men när man väl förstått konceptet är det väldigt användbart samt tillför ett bättre struktur till koden.  
+Redux är ett extension som används för att underlätta hanteringen av data inom applikationen. Det finns inget krav på att använda sig av denna extension. Om webbapplikationen ej är uppbyggd med någon större datahantering kan det vara att föredra att ej använda sig av denna modell. 
 
-Användningen av dessa olika extensions samt komponenter gör React till ett väldigt kraftigt utvecklingsverktyg. När man väl förstår sig på hur React fungerar är det möjligt att utveckla sin kunskap ytterligare genom att börja använda sig av React Native. Med detta verktyg kan man utveckla Android samt IOS baserade applikationer.
+Översiktligt kan man beskriva Redux som ett moln som finns ovanför applikationslagret som gör det möjligt för olika delar av applikationen att komma åt data. Som ett expemel kan det vara bra för en del av applikationen att komma åt en profilbild som är länkad till en viss profil. En miniatyr denna profilbild kanske sedan ska anvädas när en sökning av användare utförs. Istället för att måste gå igenom flera "lager" innan man kan plocka fram denna bild gör Redux det möjligt för alla komponenter inom applikationen att få tillgång till det som lagras där. Det blir en aning komplicerat innan man förstått uppläget men när man väl förstått konceptet är det väldigt användbart samt tillför ett bättre struktur till koden.  
+
+Användningen av dessa olika extensions och komponenter gör React till ett väldigt kraftigt utvecklingsverktyg. När man väl förstår sig på hur React fungerar är det möjligt att utveckla sin kunskap ytterligare genom att börja använda sig av React Native. Med detta verktyg kan man utveckla Android samt IOS baserade applikationer.
 
 ### Hur använder man React?
 Ett expel på hur det skulle kunna se ut när man ska uppdatera sin HTML sidan med någon information går att se i följande kod:
@@ -89,13 +91,11 @@ Node.js är inte ett programmeringsspråk likt C#. Det är inte heller ett ramve
 Node.js är en körbar miljö som kan exekvera JavaScript. Det används som ett API mellan vyn och databasen i webbapplikationer. Förrutom att kunna köra JavaScript back-end består Node.js av ett antal core modules.
 
 #### Core modules
-Detta är moduler som finns direkt efter installationen av Node.js. Varje modul består av ett antal funktioner. Dessa funktioner innehåller den mest grundläggande funktionaliteten för Node.js. Exempel på core modules:
+Detta är moduler som finns direkt efter installationen av Node.js. Varje modul består av ett antal funktioner. Dessa funktioner innehåller den mest grundläggande funktionaliteten för Node.js. [Här](https://nodejs.org/dist/latest-v12.x/docs/api/) hittar du alla core modules och nedan finns några exempel:
 
 * **HTTP** *- Används för att kommunicera med en webb-klient.*
 * **path** *- Gör att man kan navigera bland filer i den dator som kör Node.js. Sparar även information om filer.*
 * **fs** *- (File System) Ger möjlighet att skapa filer och mappar.*
-
-[Här](https://nodejs.org/dist/latest-v12.x/docs/api/) hittar du alla core modules.
 
 #### Node package manager (npm)
 Node.js är open-source vilket innebär att det finns mängder av paket skapade av tredjepartsutvecklare. Ett paket kan vara ett ramverk, bibiliotek eller andra verktyg och innehåller likt core-modulerna ett antal funktioner. Många paket bygger på core-modulerna eller på andra npm-paket. [Här](https://www.npmjs.com/) hittar du alla npm-paket.
@@ -322,9 +322,9 @@ npm run nodemon server
 ### MongoDB
 För att använda sig av den molnbaserade databasen MongoDB Atlas utför följande steg.
 
-* Skapa en användare på hemsidan [MongoDB](https://www.mongodb.com/cloud/atlas) (Om du endast ska bygga en prototyp behöver du ej någon betalvariant av tjänsten.
+* Skapa en användare på hemsidan [MongoDB](https://www.mongodb.com/cloud/atlas). Om du endast ska bygga en prototyp behöver du ej någon betalvariant av tjänsten.
 
-* Antingen väljer du att sköta uppkopplingen till databasen i server.js filen eller så väljer du att göra detta i en separat javascript fil för att hålla bättre kodstuktur. 
+* Antingen väljer du att sköta uppkopplingen till databasen i server.js filen eller så väljer du att göra detta i en separat JavaScript-fil för att hålla bättre kodstuktur. 
 
 ```javascript
 //Börja med att implementera mongoose till filen
