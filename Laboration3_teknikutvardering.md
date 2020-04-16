@@ -253,15 +253,18 @@ const express = require('express');
 const app = express();
 
 // Ta emot olika typer av HTTP-förfrågningar
-app.get('/login', function(req, res) {
-  // Här kan du manipulera data i den mottagna HTTP-requesten
-  // Här kan du interagera med databasen
-  // Här kan du skicka tillbaka en HTTP-response
+app.get('/', function(req, res) {
+  // Manipulera data i den mottagna HTTP-requesten
+  // Interagera med databasen
+  // Mängder med möjligheter
+  // Skicka tillbaka en HTTP-response
 });
-app.post('/login', function(req, res) {
-  // Här kan du manipulera data i den mottagna HTTP-requesten
-  // Här kan du interagera med databasen
-  // Här kan du skicka tillbaka en HTTP-response
+
+app.post('/', function(req, res) {
+  // Manipulera data i den mottagna HTTP-requesten
+  // Interagera med databasen
+  // Mängder med möjligheter
+  // Skicka tillbaka en HTTP-response
 });
 
 // Lyssna efter HTTP-förfrågningar som i det här fallet skickas till port http://localhost:5000/
