@@ -211,7 +211,7 @@ MongoDB är en "NoSQL" databas där varje tabell (om man drar paralellen till en
 Fördelen med MongoDB är att man kan anväda sig av dess skal vilket medför att man kan interagera med ett javascript interface. Detta medför att man kan skicka skapa, uppdatera, ta bort data etc från databasen direkt via javascriptkommandon. Eftersom att databasen är uppbyggd med hjälp av nyckevärden behöver man ej i förhand koppla ihop olika tabeller med Primary keys samt Foreign keys. På detta vis blir databasen mer flexibel och enklare att modifiera i efterhand. Största fördelen med MongoDB är dock att man kan kommunicera med den med hjälp av javascript, detta resulterar i att samtilga delar i MERN stacken är uppbyggd med javascript som grund.
 ### Hur använder man MongoDB?
 ```javascript
-//Om vi har skapat ett objekt i en MongoDB databas kan vi tillexempel lägga in data genom att kalla på följande funktion
+//Om vi har skapat ett objekt i en MongoDB databas kan vi tex lägga in data genom att kalla på följande funktion
 db.tabellnamn.insert
 (
     //Data som placeras in är skrivet i JSON format där varje objekt innehar ett eget objekt ID
@@ -292,7 +292,8 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
   //utför uppkopplinen inuti en try catch för att hantera eventuella uppkopplingsproblem
   try{
-    //Logga in på din MongoDB profil och klicka "connect" -> "connect your application" och kopiera URLsträngen. Fyll in dit           lösenord under <password> delen i stängen. Skicka sedan in denna stäng tillsammans med eventuella "deprications warnings"         fixar.
+    //Logga in på din MongoDB profil och klicka "connect" -> "connect your application" och kopiera URLsträngen. 
+    Fyll in dit lösenord under <password> delen i stängen. Skicka sedan in denna stäng tillsammans med eventuella "deprications             warnings" fixar.
     await mongoose.connect(databasnyckel , {
       useNewUrlParser: true
     });
