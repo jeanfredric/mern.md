@@ -1,12 +1,12 @@
 # Teknikutvärderingsrapport
-
 Detta dokument är framplockat av två studenter vid Umeå Universitet som läser kursen Applikationsutveckling för Internet. Syftet med dokumentet är att ge en inblickande guide till hur utvekclingsstacken MERN är uppbyggd samt hur man går till väga för att skapa ett nytt projekt.
 
 ## Överblick
+Dokumentet är uppdelat i olika sektioner för att ge en bättre förståelse för hur de olika delarna är uppbydda samt vart koden exekveras. Vi väljer att titta på stacken från "front-end" sidan och arbetar oss sedan igenom stacken för att sedan avsluta med att förklara hur databasen är uppbyggd.
 
-Dokumentet är uppdelat i olika sektioner för att ge en bättre förståelse för hur de olika delarna är uppbydda samt vart koden exekveras. Vi väljer att titta på stacken från "front-end" sidan och arbetar oss sedan igenom stacken för att sedan avsluta med att förklara hur databasen är uppbyggd. 
 
-### Men vad är då MERN, och varför används denna "stack"?
+
+### Vad är MERN?
 
 MERN stacken är uppbydds av följande komponenter:
 Verktyg | Beskrivning
@@ -36,13 +36,9 @@ Den stora fördelen med stacken är att man genomgående endast använder JavaSc
 ### Förkunskap
 
 Det underlättar om man har grundläggande kompetens inom följande områden innan man börjar med MERN:
-
-#### JavaScript
-Hela stacken bygger på detta språk. Om man har tidigare koderfarenhet men är novis inom JavaScript kan det vara en idé att lära sig [async/await](https://www.youtube.com/watch?v=PoRJizFvM7s) och [arrow functions](https://www.youtube.com/watch?v=u4URamXstM0).
-#### JSON
-Lättviktat språk som används när man skickar data mellan klient, server och databas. Se en introduktion [här](https://www.youtube.com/watch?v=wI1CWzNtE-M&t=1241s).
-#### HTTP
-Då man kommer att skicka och ta emot HTTP-meddelanden bör man känna till protokollets uppbyggnad. Se en överblick [här](https://www.youtube.com/watch?v=iYM2zFP3Zn0).
+* **JavaScript** -  Hela stacken bygger på detta språk. Om man har tidigare koderfarenhet men är novis inom JavaScript kan det vara en idé att lära sig [async/await](https://www.youtube.com/watch?v=PoRJizFvM7s) och [arrow functions](https://www.youtube.com/watch?v=u4URamXstM0).
+* **JSON** - Lättviktat språk som används när man skickar data mellan klient, server och databas. Se en introduktion [här](https://www.youtube.com/watch?v=wI1CWzNtE-M&t=1241s).
+* **HTTP** - Då man kommer att skicka och ta emot HTTP-meddelanden bör man känna till protokollets uppbyggnad. Se en överblick [här](https://www.youtube.com/watch?v=iYM2zFP3Zn0).
 
 ## React
 ### Vad är React?
