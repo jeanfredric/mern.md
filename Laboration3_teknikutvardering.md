@@ -233,6 +233,7 @@ db.tabellnamn.insert
 ```
 npm init
 ```
+* Fyll i formuläret som dyker upp med projektnamn etc.
 * Detta skapar en fil `package.json` som fil lagrar namn, version och beroenden mellan olika installerade paket.
 * Installera användbara npm-paket, till exempel:
 ```
@@ -243,7 +244,11 @@ npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose r
 npm install -D nodemon concurrently
 ```
 * Skapa din main-fil `server.js`, förslagsvis genom en editor, ex. Visual Studio Code.
-
+* Öppna filen `package.json` och lägg in följande kod i ´"scripts"´:
+```javascript
+"start": "node server"
+"server": "nodemon server"
+```
 ### Express
 * I `server.js` skriver du följande kod:
 ```javascript
@@ -273,7 +278,7 @@ app.listen(5000);
 ```
 * Back-end-servern är nu redo att användas. Teststarta servern genom att skriva i terminalen:
 ```
-npm run nodemon server
+npm run server
 ```
 
 
