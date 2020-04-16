@@ -21,7 +21,7 @@ För att få en bättre överblick vilka program som exekverar vart kan vi titta
 På klientsidan av programmet (view) arbetar **React**. Denna del ansvarar för UI som användaren möts av.
 
 #### Back-end
-På seversidan arbetar resterande program. **Node.js** gör det möjligt att exekvera JavaScript-kod direkt på servern. Utöver detta har plattformen väldigt många användbara tilläggspaket att utnyttja (om du ska utföra någon specifik uppgift är det väldigt stor chans att någon annan redan skapat ett framework för att utöfra just denna uppgift). 
+På seversidan arbetar resterande program. **Node.js** gör det möjligt att exekvera JavaScript-kod direkt på servern. Utöver detta har plattformen väldigt många användbara tilläggspaket att utnyttja. Om du ska utföra någon specifik uppgift är det väldigt stor chans att någon annan redan skapat ett framework för att utöfra just denna uppgift. 
 
 Ett av dessa paket är **Express**. Detta ramverk ansvarar framförallt för att förenkla kommunikationen mellan React och Node.js, men har även ytterligare funktionalitet.
 
