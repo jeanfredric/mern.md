@@ -233,7 +233,6 @@ db.tabellnamn.insert
 ```
 npm init
 ```
-* Fyll i formuläret som dyker upp med projektnamn etc.
 * Detta skapar en fil `package.json` som fil lagrar namn, version och beroenden mellan olika installerade paket.
 * Installera användbara npm-paket, till exempel:
 ```
@@ -244,11 +243,7 @@ npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose r
 npm install -D nodemon concurrently
 ```
 * Skapa din main-fil `server.js`, förslagsvis genom en editor, ex. Visual Studio Code.
-* Öppna filen `package.json` och lägg in följande kod i `"scripts"`:
-```javascript
-"start": "node server"
-"server": "nodemon server"
-```
+
 ### Express
 * I `server.js` skriver du följande kod:
 ```javascript
@@ -278,20 +273,36 @@ app.listen(5000);
 ```
 * Back-end-servern är nu redo att användas. Teststarta servern genom att skriva i terminalen:
 ```
-npm run server
+npm run nodemon server
 ```
 
 
 ### MongoDB
+För att använda sig av den molnbaserade databasen MongoDB Atlas utför följande steg.
 
-Tjena! Denna borde vi göra lite mer utförlig, likt video 7 i Udemy????
+* Skapa en användare på hemsidan [MongoDB] (https://www.mongodb.com/cloud/atlas): (Om du endast ska bygga en prototyp behöver du ej någon betalvariant av tjänsten.
+
+* Antingen väljer du att sköta uppkopplingen till databasen i server.js filen eller så väljer du att göra detta i en separat javascript fil för att hålla bättre kodstuktur. 
 
 ```javascript
-//Skapa enkelt en databas genom kommandot
-use databas_namn
+//Börja med att implementera mongoose till filen
+const mongoose = require('mongoose');
 
-//Du kan sedan lägga in tabeller (objekt) genom att skriva
-databas_namn.createCollection("tabellNamn");
+//Skapa sedan en funktion som sköter uppkopplingen. (använd dig utav "async samt await för att ej låsa upp tråden)
+const connectDB = async () => {
+  //utför uppkopplinen inuti en try catch för att hantera eventuella uppkopplingsproblem
+  try{
+    //Logga in på din MongoDB profil och klicka "connect" -> "connect your application" och kopiera URLsträngen. Fyll in dit           lösenord under <password> delen i stängen. Skicka sedan in denna stäng tillsammans med eventuella "deprications warnings"         fixar.
+    await mongoose.connect(databasnyckel , {
+      useNewUrlParser: true
+    });
+    
+  catch(err){
+    console.error(err.message);
+    //Avsluta uppkopplingsförsöket med en nedstängning
+    process.exit(1);
+  }
+};
 ```
 
 
@@ -300,7 +311,7 @@ databas_namn.createCollection("tabellNamn");
 ```
 bash ****** Windows-grej??
 ``` 
-* Använd node package manager för att installera React:
+* Använd node package manager för att installera react:
 ```
 npm install create-react-app --global
 ```
@@ -313,7 +324,7 @@ create-react-app applikationsnamn
 ```
 npm start
 ```
-* För att köra React och Node.js samtidigt använder vi oss av devDependencies concurrently som installerades tidigare via npm. För att detta ska fungera, öppna filen `package.json` och lägg in följande kod i `"scripts"`:
+* För att köra React och Node.js samtidigt använder vi oss av devDependencies concurrently som installerades tidigare via npm. För att detta ska fungera, öppna filen `package.json` och lägg in följande kod i ´"scripts"´:
 ```javascript
 "client": "npm start --prefix client", 
 "dev": "concurrently \"npm run server\" \"npm run client\""
@@ -322,7 +333,7 @@ npm start
 ```
 npm run dev
 ```
-* Du kan nu även installera npm-paket som underlättar i React, till exempel (läs mer om paketen hos [npm](https://www.npmjs.com/)):
+* Du kan nu även installera npm-paket som underlättar i React, till exempel (läs mer om paketen hos [npm](https://www.npmjs.com/)).:
 ```
 npm i axios react-router-dom redux react-redux redux-thunk redux-devtools-extension moment react-moment
 ```
