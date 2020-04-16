@@ -15,8 +15,6 @@ Verktyg | Beskrivning
 **R**eact   | View
 **N**ode.js | Controller & Model
 
-För att få en bättre överblick vilka program som exekverar vart kan vi titta på nedstående bild. 
-
 #### Front-end
 På klientsidan av programmet (view) arbetar **React**. Denna del ansvarar för UI som användaren möts av.
 
