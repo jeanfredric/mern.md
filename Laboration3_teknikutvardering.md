@@ -293,17 +293,34 @@ databas_namn.createCollection("tabellNamn");
 ### React
 * Navigera till projektetmappen i din terminal och skriv:
 ```
-bash
+bash ****** Windows-grej??
 ``` 
 * Använd node package manager för att installera react:
 ```
 npm install create-react-app --global
 ```
-* Skapa sedan applikationen genom att skriva 
+* Skapa sedan applikationen genom att skriva:
 ```
 create-react-app applikationsnamn
 ```
-* Starta sedan applikationen genom att navigera till mappen där applikationen finns och skriv
+* Alla filer som krävs för en grundläggande React-applikation är nu skapade i en mapp med applikationsnamnet. 
+* Du kan nu teststarta applikationen genom att navigera till mappen med applikationsnamnet och skriv:
 ```
 npm start
 ```
+* För att köra React och Node.js samtidigt använder vi oss av devDependencies concurrently som installerades tidigare via npm. För att detta ska fungera, öppna filen `package.json` och lägg in följande kod i ´"scripts"´:
+```javascript
+"client": "npm start --prefix client", 
+"dev": "concurrently \"npm run server\" \"npm run client\""
+```
+* Nu kan du starta React och Node.js från root-mappen genom följande kommando:
+```
+npm run dev
+```
+* Du kan nu även installera npm-paket som underlättar i React, till exempel (läs mer om paketen hos [npm](https://www.npmjs.com/)).:
+```
+npm i axios react-router-dom redux react-redux redux-thunk redux-devtools-extension moment react-moment
+```
+```
+
+**Du är nu redo att utveckla en sprillans ny MERN-applikation!**
