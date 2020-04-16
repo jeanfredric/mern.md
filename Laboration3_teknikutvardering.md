@@ -69,7 +69,7 @@ import ReactDom from "react-dom";
 class Layout extends React.Component {
   render() {
     return (
-      <h1> Detta är en komponent som kommer uppdatera hemsidan med en rubrik >/h>
+      <h1> Detta är en komponent som kommer uppdatera hemsidan med en rubrik </h>
     );
   }
 
