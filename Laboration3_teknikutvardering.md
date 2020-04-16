@@ -53,13 +53,12 @@ JSX står för Javascript XML och är ett HTML samt XML "extension" (utvecklings
 
 #### Redux
 Denna del kan ses som en aning komplicerad och svårförståelig om man ej tidigare utvecklat med React. (Om du ej tidigare utvecklat med React och känner att du har svårt att greppa konceptet med hur React fungerar skulle jag avråda dig ifrån att lägga ner alldeles för mycket kraft på att förstå detta segment innan du testat på React och förstått grunden).
-Redux är ett extension som används för att underlätta hanteringen av data inom applikationen. Det finns inget krav på att använda sig av denna extension. Om webbapplikationen ej är uppbyggd med någon större datahantering kan det vara att föredra att ej använda sig av denna modell. Översiktligt kan man beskriva Redux som ett moln som finns ovanför applikationslagret som gör det möjligt för olika delar av applikationen att komma åt data. Som ett expemel kan det vara bra för en del av applikationen att komma åt en profilbild som är länkad till en viss profil. En miniatyr denna profilbild kanske sedan ska anvädas när en sökning av användare utförs. Istället för att måste gå igenom flera "lager" innan man kan plocka fram denna bild gör Redux det möjligt för alla komponenter inom applikationen att få tillgång till det som lagras där. Det blir en aning komplicerat innan man förstått uppläget men när man väl förstått konceptet är det väldigt användbart samt tillför ett bättre struktur till koden. 
-Redux används för att underlätta datahanteringen inom applikationen. 
+Redux är ett extension som används för att underlätta hanteringen av data inom applikationen. Det finns inget krav på att använda sig av denna extension. Om webbapplikationen ej är uppbyggd med någon större datahantering kan det vara att föredra att ej använda sig av denna modell. Översiktligt kan man beskriva Redux som ett moln som finns ovanför applikationslagret som gör det möjligt för olika delar av applikationen att komma åt data. Som ett expemel kan det vara bra för en del av applikationen att komma åt en profilbild som är länkad till en viss profil. En miniatyr denna profilbild kanske sedan ska anvädas när en sökning av användare utförs. Istället för att måste gå igenom flera "lager" innan man kan plocka fram denna bild gör Redux det möjligt för alla komponenter inom applikationen att få tillgång till det som lagras där. Det blir en aning komplicerat innan man förstått uppläget men när man väl förstått konceptet är det väldigt användbart samt tillför ett bättre struktur till koden.  
 
-Användningen av dessa olika extensions samt komponenter gör React till ett väldigt kraftigt utvecklingsverktyg. När man väl förstår sig på hur React fungerar är det möjligt att utveckla sin kunskap genom att börja använda sig av React Native. Med detta verktyg kan man utveckla Android samt IOS baserade applikationer.
+Användningen av dessa olika extensions samt komponenter gör React till ett väldigt kraftigt utvecklingsverktyg. När man väl förstår sig på hur React fungerar är det möjligt att utveckla sin kunskap ytterligare genom att börja använda sig av React Native. Med detta verktyg kan man utveckla Android samt IOS baserade applikationer.
 
 ### Hur använder man React?
-Ett expel på hur det skulle kunna se ut när man ska uppdatera son HTML sidan men någon information går att se i följande kod:
+Ett expel på hur det skulle kunna se ut när man ska uppdatera sin HTML sidan med någon information går att se i följande kod:
 ```javascript
 //Börja med att importera React samt React-dom för att kunna använda sig av dess funktionalitet
 import React from "react";
@@ -73,10 +72,13 @@ class Layout extends React.Component {
     );
   }
 
-//Om vi sedan säger att vi har en tagg vid namn applikation i HTML dokumentet så uppdaterar vi informationen under den sektionen genom följande kod. Vi börjar med att hämta objektet vid namn applikation och placera detta i en variabel
+//Om vi sedan säger att vi har en tagg vid namn applikation i HTML dokumentet så uppdaterar vi informationen
+//under den sektionen genom följande kod. 
+//Vi börjar med att hämta objektet vid namn applikation och placera detta i en variabel
 const applikation = document.getElementById('applikation');
 
-//Vi uppdaterar (renderar) sedan dokumentet med vår nya rubrike genom att skicka in komponenten till det hämtade aplikationsdokumentet.
+//Vi uppdaterar (renderar) sedan dokumentet med vår nya rubrik genom att
+//skicka in komponenten till det hämtade aplikationsdokumentet.
 ReactDOM.render(<Layout/>, applikation);
 ```
 I den nya uppdateringen av React är det dock möjligt att uppdatera komponenter genom att använda sig av något som kallas **React Hooks**. Detta tillägg gör att man ej behöver skapa separata klasser för att uppdatera en komponent, man skapar istället endast funtioner som uppdaterar komponenterna. Kodmässigt blir det mindre jobb samt mer strukturerat när man anväder sig av hooks. Men ur ett utlärningssyfte kan det vara mer intuitivt att först förstå upplägget genom klasser som komponenter.
@@ -138,7 +140,7 @@ skriver man till exempel `path.function()` där `function()` är en funktion i m
 ## Express
 ### Vad är Express?
 
-Express är ett paket som installeras till Node.js via npm. Det Node.js's mest populära paket. Eftersom Node.js opererar back-end så är även Express back-end. Express är ett **ramverk** ovanpå Node.js - alltså en samling funktioner skrivna i Node.js. Utan dessa funktioner skulle utvecklaren behöva skriva stora mängder kod för simpla uppgifter. Funktionerna är vanligt förekommande och en funktion kan användas i många olika syften. Utvecklaren adderar sedan egen kod till dessa funktioner för att fylla applikationens specifika syfte och det är det som skiljer ett **ramverk** från ett **bibliotek** som endast består av färdiga funktioner. Express syfte i MERN-stacken är att göra det enkelt att ta emot HTTP-requests från front-end (React) och skicka tillbaka HTTP-respons. Express är alltså back-end-serverns API mot front-end.
+Express är ett paket som installeras till Node.js via npm. Det är Node.js's mest populära paket. Eftersom Node.js opererar back-end så är även Express back-end. Express är ett **ramverk** ovanpå Node.js - alltså en samling funktioner skrivna i Node.js. Utan dessa funktioner skulle utvecklaren behöva skriva stora mängder kod för simpla uppgifter. Funktionerna är vanligt förekommande och en funktion kan användas i många olika syften. Utvecklaren adderar sedan egen kod till dessa funktioner för att fylla applikationens specifika syfte och det är det som skiljer ett **ramverk** från ett **bibliotek** som endast består av färdiga funktioner. Express syfte i MERN-stacken är att göra det enkelt att ta emot HTTP-requests från front-end (React) och skicka tillbaka HTTP-respons. Express är alltså back-end-serverns API mot front-end.
 
 ### Varför är Express bra?
 
@@ -174,9 +176,9 @@ Sedan väljer man vilken typ av HTTP-förfrågan som tas emot, i fallet nedan ä
 ```javascript
 app.post('/login', function(req, res) {
   if (req.user.id === id) {
-    res.send(JSON.stringify(error);
+    res.send(JSON.stringify(success);
   }
-  res.send(JSON.stringify(success);
+  res.send(JSON.stringify(error);
 });
 ```
 #### Middleware
@@ -216,7 +218,7 @@ En av fördelarna med MongoDB är att man kan anväda sig av tilläggsbiblioteke
 
 ### Hur använder man MongoDB?
 
-* Börja med ett skapa en klass vi namn Profile innehållande ditt "schema" (dvs ditt objekt som ska sparar i databsen)
+* **Exempel** - Börja med ett skapa en klass vid namn Profile innehållande ditt "schema" (dvs ditt objekt som ska sparas i databsen)
 ```javascript
 //Implementera mongoose
 var mongoose = require('mongoose');
@@ -333,14 +335,15 @@ const connectDB = async () => {
   //utför uppkopplinen inuti en try catch för att hantera eventuella uppkopplingsproblem
   try{
     //Logga in på din MongoDB profil och klicka "connect" -> "connect your application" och kopiera URLsträngen. 
-    Fyll in dit lösenord under <password> delen i stängen. Skicka sedan in denna stäng tillsammans med eventuella "deprications             warnings" fixar.
+    //Fyll in dit lösenord under <password> delen i stängen. 
+    //Skicka sedan in denna stäng tillsammans med eventuella "deprications warnings" fixar.
     await mongoose.connect(databasnyckel , {
       useNewUrlParser: true
     });
     
   catch(err){
     console.error(err.message);
-    //Avsluta uppkopplingsförsöket med en nedstängning
+    //Avsluta uppkopplingsförsöket med en nedstängning om problem uppstått
     process.exit(1);
   }
 };
