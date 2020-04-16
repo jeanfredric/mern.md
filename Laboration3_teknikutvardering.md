@@ -26,7 +26,9 @@ Ett av dessa paket är **Express**. Detta ramverk ansvarar framförallt för att
 **MongoDB** körs ofta på en separat server och fungerar som databas för att lagra data. **MongoDB Atlas** är en molnbaserad variant av databasen.
 
 ### Varför är MERN bra?
-Den stora fördelen med stacken är att man genomgående endast använder JavaScript och JSON. Stacken består av fyra teknologier som gör det möjligt att designa och utveckla webbapplikationer snabbt och smidigt.
+Den stora fördelen med stacken är att man kan bygga en full stack-webbapplikation utan att behöva växla mellan många olika språk. Det räcker med JavaScript och JSON.
+
+MERN är väldigt populär på marknaden. Om du är utvecklare och söker jobb så har du goda chanser ifall du är bevandrad i dessa teknologier.
 
 ### Förkunskap
 Det underlättar om man har grundläggande kompetens inom följande områden innan man börjar med MERN:
@@ -81,7 +83,6 @@ I den nya uppdateringen av React är det dock möjligt att uppdatera komponenter
 
 ## Node.js 
 ### Vad är Node.js?
-
 Node.js är inte ett programmeringsspråk likt C#. Det är inte heller ett ramverk likt ASP.NET.
 Node.js är en körbar miljö som kan exekvera JavaScript. Det används som ett API mellan vyn och databasen i webbapplikationer. Förrutom att kunna köra JavaScript back-end består Node.js av ett antal core modules.
 
@@ -95,12 +96,12 @@ Detta är moduler som finns direkt efter installationen av Node.js. Varje modul 
 [Här](https://nodejs.org/dist/latest-v12.x/docs/api/) hittar du alla core modules.
 
 #### Node package manager (npm)
-
 Node.js är open-source vilket innebär att det finns mängder av paket skapade av tredjepartsutvecklare. Ett paket kan vara ett ramverk, bibiliotek eller andra verktyg och innehåller likt core-modulerna ett antal funktioner. Många paket bygger på core-modulerna eller på andra npm-paket. [Här](https://www.npmjs.com/) hittar du alla npm-paket.
 
 ### Varför är Node.js bra?
+JavaScript är det vanligaste språket inom Front-end-utveckling och syftet bakom Node.js är att kunna använda JavaScript även Back-end. Node.js är tillsammans med ramverket Express är ett av de mest använda verktygen för Back-end-utveckling på marknaden.
 
-JavaScript är det vanligaste språket inom Front-end-utveckling och syftet bakom Node.js är att kunna använda JavaScript även Back-end. Tillsammans med ramverket Express är ett av de mest använda på marknaden. Det finns därför stor efterfrågan efter utvecklare med kunskap i Node.js. Node.js är känt för att vara väldigt snabbt och effektivt. En anledning är att Node.js är singeltrådat (asynkront) vilket innebär att det är väldigt effektiv och snabb för mindre appar som inte kräver stora mängder beräkningar.
+Node.js är känt för att vara väldigt snabbt och effektivt. En anledning är att Node.js är singeltrådat (asynkront) vilket innebär att det är väldigt effektiv och snabb för mindre appar som inte kräver stora mängder beräkningar.
 
 ### Hur använder man Node.js?
 
