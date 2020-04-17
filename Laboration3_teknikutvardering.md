@@ -1,5 +1,5 @@
 # Teknikutvärderingsrapport
-Detta dokument är framplockat av två studenter vid Umeå Universitet som läser kursen Applikationsutveckling för Internet. Syftet med dokumentet är att ge en inblickande guide till hur utvecklingsstacken MERN är uppbyggd samt hur man går tillväga för att skapa ett nytt projekt.
+Detta dokument är framplockat av två studenter, Fredric Birgersson och Niklas Eriksson, vid Umeå Universitet genom kursen Applikationsutveckling för Internet. Syftet med dokumentet är att ge en inblickande guide till hur utvecklingsstacken MERN är uppbyggd samt hur man går tillväga för att skapa ett nytt projekt.
 
 Dokumentet är uppdelat i olika sektioner för att ge en bättre förståelse för hur de olika delarna är uppbydda samt vart koden exekveras. Vi väljer att titta på stacken från Front-end och arbetar oss sedan igenom stacken för att sedan avsluta med att förklara hur databasen är uppbyggd.
 
