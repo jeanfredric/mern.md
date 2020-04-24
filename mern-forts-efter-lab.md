@@ -1,8 +1,8 @@
 ## Redux setup
 
-* Skapa mappen `reducers` i /client/src och skapa filen `index.js`. 
+* Skapa mappen `reducers` i `/client/src` och skapa filen `index.js`. 
 
-* Backa ut till /client och skapa filen `store.js` kod:
+* Backa ut till `/client/src` och skapa filen `store.js` kod:
 ```javascript
 
 import { createStore, applyMiddleware } from 'redux';
