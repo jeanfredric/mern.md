@@ -28,4 +28,4 @@ Klistra ihop React och Redux genom att skriva följande kod i `app.js`:
 import { Provider } from 'react-redux';
 import store from './store';
 ```
-Wrappa sedan hela app-funktionen i `app.js` med taggen `<Provider>`
+Wrappa sedan hela app-funktionen i `app.js` med taggen `<Provider store={store}> ... </Provider>`
