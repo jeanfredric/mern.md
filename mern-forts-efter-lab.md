@@ -1,6 +1,8 @@
 ## Redux setup
 
-Skapa mappen `reducers` i client/src och skapa filen `index.js` i mappen och skriv följande kod i `index.js`:
+* Skapa mappen `reducers` i /client/src och skapa filen `index.js`. 
+
+* Backa ut till /client och skapa filen `store.js` kod:
 ```javascript
 
 import { createStore, applyMiddleware } from 'redux';
@@ -22,10 +24,20 @@ const store = createStore(
 
 export default store;
 ```
-
-Klistra ihop React och Redux genom att skriva följande kod i `app.js`:
+* Denna fil kommer vi inte att behöva röra igen
+* Klistra ihop React och Redux genom att skriva följande kod i `app.js`:
 ```javascript
 import { Provider } from 'react-redux';
 import store from './store';
 ```
-Wrappa sedan hela app-funktionen i `app.js` med taggen `<Provider store={store}> ... </Provider>`
+* Wrappa sedan hela app-funktionen i `app.js` med taggen `<Provider store={store}> ... </Provider>`
+
+* Addera sedan följande kod till `index.js`:
+```javascript
+import { combineReducers } from 'redux';
+import auth from './auth';
+import profile from './profile';
+
+export default combineReducers({ auth, profile });
+```
+* I filen ovan har två reducers lagts till (auth och profile). Addera varje reducer som du skapar.
