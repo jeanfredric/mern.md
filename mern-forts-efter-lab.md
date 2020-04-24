@@ -41,3 +41,5 @@ import profile from './profile';
 export default combineReducers({ auth, profile });
 ```
 * I filen ovan har två reducers lagts till (auth och profile). Addera varje reducer som du skapar.
+
+* Nu ska det fungera om du går in i Chrome och klickar igång Redux DevTools.
